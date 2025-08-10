@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Cathartic Casting Compulsion"
 run/main_scene="res://Scenes/world_root.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="Cathartic Casting Compulsion"
 
 [input]
 
