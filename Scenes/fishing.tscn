@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhux156d2h6gq"]
+
+[ext_resource type="Script" uid="uid://cvcma5eupq5g2" path="res://Scenes/fishing.gd" id="1_aamv5"]
+[ext_resource type="Texture2D" uid="uid://ddcrjprppk0sb" path="res://hookbox.png" id="1_av1u1"]
+[ext_resource type="Texture2D" uid="uid://b3nbs4wnyvjpg" path="res://progressbackground.png" id="2_aamv5"]
+[ext_resource type="Texture2D" uid="uid://cqed1uh1y4471" path="res://progressfish.png" id="3_f6wi8"]
+[ext_resource type="Script" uid="uid://b0fcqiwpx2lu1" path="res://Scenes/darting_fish.gd" id="5_av1u1"]
+[ext_resource type="Texture2D" uid="uid://blek2oel2u1oh" path="res://dartingfish.png" id="5_lym3h"]
+
+[node name="Fishing" type="Node2D"]
+script = ExtResource("1_aamv5")
+
+[node name="HookBox" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(0.469983, 0.469983)
+texture = ExtResource("1_av1u1")
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+position = Vector2(1250, 293.5)
+texture = ExtResource("2_aamv5")
+
+[node name="ProgressFish" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ProgressFish"]
+position = Vector2(1249, 98.5)
+texture = ExtResource("3_f6wi8")
+
+[node name="DartingFish" type="Node2D" parent="."]
+script = ExtResource("5_av1u1")
+
+[node name="Sprite2D" type="Sprite2D" parent="DartingFish"]
+position = Vector2(576, 320)
+scale = Vector2(0.469983, 0.469983)
+texture = ExtResource("5_lym3h")

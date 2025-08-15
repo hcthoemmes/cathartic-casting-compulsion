@@ -8,7 +8,6 @@
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_favqm"]
 
 [node name="WorldRoot" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="angelo" parent="." instance=ExtResource("1_y8phq")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 1, 0)
