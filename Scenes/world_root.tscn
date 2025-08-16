@@ -54,3 +54,6 @@ shape = SubResource("BoxShape3D_t731x")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="FishinHole"]
 mesh = ExtResource("5_uakgf")
+
+[connection signal="body_entered" from="FishinHole" to="angelo" method="_on_fishin_hole_body_entered"]
+[connection signal="body_exited" from="FishinHole" to="angelo" method="_on_fishin_hole_body_exited"]
