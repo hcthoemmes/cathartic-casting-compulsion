@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=4 uid="uid://7djbde0b07qh"]
 
 [ext_resource type="Texture2D" uid="uid://bxc1ouseebw8c" path="res://Models/angelo_s177_06.png" id="1_8glg5"]
-[ext_resource type="Script" path="res://Scripts/angelo.gd" id="1_8i8xg"]
+[ext_resource type="Script" uid="uid://b6o2fuward8ur" path="res://Scripts/angelo.gd" id="1_8i8xg"]
 [ext_resource type="Texture2D" uid="uid://cwtmj3pxr7jca" path="res://Models/angelo_s177_03.png" id="2_vmvyt"]
 [ext_resource type="Texture2D" uid="uid://daxjkhax5lmg" path="res://Models/angelo_s177_02.png" id="3_yu4bb"]
 [ext_resource type="Texture2D" uid="uid://cg3jx3yc3p83" path="res://Models/angelo_s177_05.png" id="4_v7h51"]
@@ -382,6 +382,6 @@ skin = SubResource("Skin_nouj4")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CapsuleShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_4c21v")

@@ -9,7 +9,8 @@ var reel_direction: Vector2
 func _physics_process(delta: float) -> void:
 	# if fish is pulling, player can attempt to reel it in
 	if fish.status == "pulling":
-		reel_direction = Input.get_vector("west", "east", "north", "south")
+		# Snap to nearest unit vector for controller input 
+		reel_direction = Input.get_vector("west", "east", "north", "south").snapped(Vector2(1,1)).normalized()
 	elif fish.status == "waiting":
 		start_round()
 
