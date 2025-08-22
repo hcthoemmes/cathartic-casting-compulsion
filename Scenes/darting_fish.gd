@@ -1,18 +1,15 @@
-extends Node2D
+extends Sprite2D
 
 var start_position: Vector2
 var pull_direction: Vector2
 var max_response_time: float = 1.8
 var min_response_time: float = 0.7
 
-var pull_strength := 50
-#var rounds := 1
-
 # resource vars
 var size: int
 var difficulty: int = 2 # between 0 and 4
+var pull_strength := 50
 @export var image: Texture2D
-#@export var image: Texture2D
 
 var max_difficulty: int = 4 
 var response_time: float
@@ -35,7 +32,7 @@ func _physics_process(_delta: float) -> void:
 		idle()
 	elif status == "caught" and not revealed:
 		reveal()
-		
+
 func idle() -> void:
 	tween = create_tween().set_loops().set_trans(Tween.TRANS_SINE)
 	var top = position.y
@@ -64,7 +61,7 @@ func reveal() -> void:
 	revealed = true
 	tween = create_tween().tween_property(self, "modulate:a", 0, 0.5)
 	await(tween.finished)
-	self.texture = image
+	texture = image
 	tween = create_tween().tween_property(self, "modulate:a", 1, 0.5)
 	
 func reset() -> void:

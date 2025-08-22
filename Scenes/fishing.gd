@@ -2,11 +2,15 @@ extends Node2D
 
 @onready var fish = $HookBox/Fish
 @onready var result: Sprite2D = $HookBox/Result
+@onready var progress_bar: Sprite2D = $ProgressBar
 
 var results = []
 var failures = 0
 var reel_direction: Vector2
-var progress := 0
+var progress := 0.0
+var progress_min = -2
+var failure_step := 1.0
+var success_step := 0.5
 
 
 func _ready() -> void:
@@ -39,14 +43,16 @@ func reel_success() -> bool:
 	
 func round_won():
 	result.show_symbol("check")
-	progress += 1
-	if progress >= fish.difficulty * 2:
+	progress += success_step
+	progress_bar.update(progress)
+	if progress >= fish.difficulty:
 		fish_caught()
 
 func round_lost():
 	result.show_symbol("cross")
-	progress -= 2
-	if progress <= -4:
+	progress -= failure_step
+	progress_bar.update(progress)
+	if progress <= progress_min:
 		fish_escaped()
 
 func fish_caught() -> void:
@@ -54,7 +60,6 @@ func fish_caught() -> void:
 	fish.reset()
 
 func fish_escaped() -> void:
-	# TO-DO: exit minigame here
 	fish.status = "escaped"
 	fish.reset()
 	create_tween().tween_property(fish, "modulate:a", 0, 1)

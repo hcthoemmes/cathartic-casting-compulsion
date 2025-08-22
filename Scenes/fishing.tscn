@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cvcma5eupq5g2" path="res://Scenes/fishing.gd" id="1_aamv5"]
 [ext_resource type="Texture2D" uid="uid://ddcrjprppk0sb" path="res://hookbox.png" id="1_av1u1"]
+[ext_resource type="Script" uid="uid://bveklijdgrp37" path="res://Scenes/progress_bar.gd" id="2_6qjx5"]
 [ext_resource type="Texture2D" uid="uid://b3nbs4wnyvjpg" path="res://progressbackground.png" id="2_aamv5"]
 [ext_resource type="Texture2D" uid="uid://cqed1uh1y4471" path="res://progressfish.png" id="3_f6wi8"]
 [ext_resource type="Script" uid="uid://b0fcqiwpx2lu1" path="res://Scenes/darting_fish.gd" id="5_av1u1"]
@@ -9,21 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://diidnhxc5svls" path="res://boxcheck.png" id="7_7hb1t"]
 [ext_resource type="Texture2D" uid="uid://eg6413o7ytuy" path="res://salmon.png" id="7_lym3h"]
 [ext_resource type="Script" uid="uid://c7xuhfa728skk" path="res://Scenes/result.gd" id="8_lym3h"]
-[ext_resource type="Script" uid="uid://crtgdociv0ni8" path="res://Scenes/sprite_2d.gd" id="10_6qjx5"]
 
 [node name="Fishing" type="Node2D"]
 script = ExtResource("1_aamv5")
 
-[node name="ProgressBar" type="Node2D" parent="."]
-position = Vector2(912, 44)
-
-[node name="Background" type="TextureRect" parent="ProgressBar"]
-offset_right = 100.0
-offset_bottom = 555.0
+[node name="ProgressBar" type="Sprite2D" parent="."]
+clip_children = 2
+position = Vector2(964, 324)
 texture = ExtResource("2_aamv5")
+script = ExtResource("2_6qjx5")
 
 [node name="ProgressFish" type="Sprite2D" parent="ProgressBar"]
-position = Vector2(50, 101)
+position = Vector2(0, -332)
 texture = ExtResource("3_f6wi8")
 
 [node name="HookBox" type="Node2D" parent="."]
@@ -48,6 +46,3 @@ position = Vector2(250, 250)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_7hb1t")
 script = ExtResource("8_lym3h")
-
-[node name="Sprite2D" type="Sprite2D" parent="HookBox"]
-script = ExtResource("10_6qjx5")
