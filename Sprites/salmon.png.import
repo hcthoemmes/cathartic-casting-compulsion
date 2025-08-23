@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfab14080uelu"
-path="res://.godot/imported/dartokspritesheet.png-9d23eb437daaca0f2c12b481178e9437.ctex"
+uid="uid://eg6413o7ytuy"
+path="res://.godot/imported/salmon.png-a53a5dd16a873b6f4ec4d036d703aeb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dartokspritesheet.png"
-dest_files=["res://.godot/imported/dartokspritesheet.png-9d23eb437daaca0f2c12b481178e9437.ctex"]
+source_file="res://Sprites/salmon.png"
+dest_files=["res://.godot/imported/salmon.png-a53a5dd16a873b6f4ec4d036d703aeb3.ctex"]
 
 [params]
 

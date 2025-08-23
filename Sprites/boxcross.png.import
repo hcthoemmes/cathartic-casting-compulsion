@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eg6413o7ytuy"
-path="res://.godot/imported/salmon.png-ccafe2c43b53e50922f697d1f5f68f41.ctex"
+uid="uid://8jnc4ppeuee2"
+path="res://.godot/imported/boxcross.png-c8303b60771c7c28344a6025cb8e87f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://salmon.png"
-dest_files=["res://.godot/imported/salmon.png-ccafe2c43b53e50922f697d1f5f68f41.ctex"]
+source_file="res://Sprites/boxcross.png"
+dest_files=["res://.godot/imported/boxcross.png-c8303b60771c7c28344a6025cb8e87f5.ctex"]
 
 [params]
 

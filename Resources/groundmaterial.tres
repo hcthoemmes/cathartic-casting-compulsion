@@ -4,4 +4,8 @@
 
 [resource]
 albedo_texture = ExtResource("1_qtbol")
-uv1_scale = Vector3(2, 2, 2)
+uv1_scale = Vector3(4.15, 4.15, 4.15)
+uv1_offset = Vector3(0.12, -0.005, 0.52)
+uv1_triplanar_sharpness = 0.594604
+uv2_triplanar_sharpness = 0.366022
+uv2_world_triplanar = true

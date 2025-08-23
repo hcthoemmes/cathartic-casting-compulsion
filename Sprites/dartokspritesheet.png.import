@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcrjprppk0sb"
-path="res://.godot/imported/hookbox.png-b046fc95b4cde252f70933d81c80fb6f.ctex"
+uid="uid://dfab14080uelu"
+path="res://.godot/imported/dartokspritesheet.png-0e6e22485788737d3edfe869f70893ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hookbox.png"
-dest_files=["res://.godot/imported/hookbox.png-b046fc95b4cde252f70933d81c80fb6f.ctex"]
+source_file="res://Sprites/dartokspritesheet.png"
+dest_files=["res://.godot/imported/dartokspritesheet.png-0e6e22485788737d3edfe869f70893ea.ctex"]
 
 [params]
 

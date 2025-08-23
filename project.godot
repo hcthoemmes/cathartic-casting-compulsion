@@ -13,7 +13,7 @@ config_version=5
 config/name="Cathartic Casting Compulsion"
 run/main_scene="res://Scenes/world_root.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
 
 [dotnet]
 

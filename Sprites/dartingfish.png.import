@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bworyf4uuuqme"
-path="res://.godot/imported/speechbubble.png-3f133d7c063d19feea9f05eb0824c489.ctex"
+uid="uid://blek2oel2u1oh"
+path="res://.godot/imported/dartingfish.png-5b5012d4dd6dcdea0ca8748a753a6541.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://speechbubble.png"
-dest_files=["res://.godot/imported/speechbubble.png-3f133d7c063d19feea9f05eb0824c489.ctex"]
+source_file="res://Sprites/dartingfish.png"
+dest_files=["res://.godot/imported/dartingfish.png-5b5012d4dd6dcdea0ca8748a753a6541.ctex"]
 
 [params]
 

@@ -17,9 +17,8 @@ func _physics_process(delta: float) -> void:
 
 		if fishing_possible:
 			if Input.is_action_just_pressed("use"):
-				is_fishing = true
-				var f = load("res://Scenes/fishing.tscn").instantiate()
-				get_node("../CanvasLayer").add_child(f)
+				begin_fishing()
+				# Lerp to some Fishin Point? Later feature
 			
 		var input_dir := Input.get_vector("west", "east", "north", "south")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -34,6 +33,15 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func begin_fishing() -> void:
+	set_velocity(Vector3.ZERO)
+	is_fishing = true
+	var f = load("res://Scenes/fishing.tscn").instantiate()
+	get_node("../CanvasLayer").add_child(f)
 
-func _on_fishin_hole_body_entered(body: Node3D) -> void: fishing_possible = true
-func _on_fishin_hole_body_exited(body: Node3D) -> void: fishing_possible = false
+func _on_fishin_hole_body_entered(body: Node3D) -> void: 
+	if body == self:
+		fishing_possible = true
+func _on_fishin_hole_body_exited(body: Node3D) -> void: 
+	if body == self:
+		fishing_possible = false

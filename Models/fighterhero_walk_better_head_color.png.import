@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch8onspsd3m8y"
-path.s3tc="res://.godot/imported/angelo_s177_03.png-2ad706a9f2749c0708fb0a67fc6961bc.s3tc.ctex"
+uid="uid://bbccve2qlh3tw"
+path.s3tc="res://.godot/imported/fighterhero_walk_better_head_color.png-c0a61cadd0ae300a06704b4b3927b80d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "750be7e5d3bf1c7ede6fc66353167829"
+"md5": "f8277c2df8b15fcb62051e1a41d4e73a"
 }
 
 [deps]
 
-source_file="res://Models/Textures/angelo_s177_03.png"
-dest_files=["res://.godot/imported/angelo_s177_03.png-2ad706a9f2749c0708fb0a67fc6961bc.s3tc.ctex"]
+source_file="res://Models/fighterhero_walk_better_head_color.png"
+dest_files=["res://.godot/imported/fighterhero_walk_better_head_color.png-c0a61cadd0ae300a06704b4b3927b80d.s3tc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3nbs4wnyvjpg"
-path="res://.godot/imported/progressbackground.png-759ee63dfa9842362ba729f44410318b.ctex"
+uid="uid://cqed1uh1y4471"
+path="res://.godot/imported/progressfish.png-310a5b1bdfec2d164e2e1dd858727225.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://progressbackground.png"
-dest_files=["res://.godot/imported/progressbackground.png-759ee63dfa9842362ba729f44410318b.ctex"]
+source_file="res://Sprites/progressfish.png"
+dest_files=["res://.godot/imported/progressfish.png-310a5b1bdfec2d164e2e1dd858727225.ctex"]
 
 [params]
 

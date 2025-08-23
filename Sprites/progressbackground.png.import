@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blek2oel2u1oh"
-path="res://.godot/imported/dartingfish.png-ce67cb62d84e7a4490aa1a52f8039c7f.ctex"
+uid="uid://b3nbs4wnyvjpg"
+path="res://.godot/imported/progressbackground.png-eaf5ed6f254a3561a36ed5a8fae8c49a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dartingfish.png"
-dest_files=["res://.godot/imported/dartingfish.png-ce67cb62d84e7a4490aa1a52f8039c7f.ctex"]
+source_file="res://Sprites/progressbackground.png"
+dest_files=["res://.godot/imported/progressbackground.png-eaf5ed6f254a3561a36ed5a8fae8c49a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8jnc4ppeuee2"
-path="res://.godot/imported/boxcross.png-cd45f017843a0930e3661c77d4a08d20.ctex"
+uid="uid://ddcrjprppk0sb"
+path="res://.godot/imported/hookbox.png-0ce2507eb7898ba0f38b3209cae65740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boxcross.png"
-dest_files=["res://.godot/imported/boxcross.png-cd45f017843a0930e3661c77d4a08d20.ctex"]
+source_file="res://Sprites/hookbox.png"
+dest_files=["res://.godot/imported/hookbox.png-0ce2507eb7898ba0f38b3209cae65740.ctex"]
 
 [params]
 

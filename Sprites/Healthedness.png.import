@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfc1410grtljq"
-path.s3tc="res://.godot/imported/angelo_s177_00.png-419ecf5b5b0ca112a2488ad122f23f67.s3tc.ctex"
+uid="uid://fwf2dwcjm7ro"
+path.s3tc="res://.godot/imported/Healthedness.png-49a545b5601069ac522632f161bad58a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "42de3d2e56e3d4c28fce48de06094954"
-}
 
 [deps]
 
-source_file="res://Models/Textures/angelo_s177_00.png"
-dest_files=["res://.godot/imported/angelo_s177_00.png-419ecf5b5b0ca112a2488ad122f23f67.s3tc.ctex"]
+source_file="res://Sprites/Healthedness.png"
+dest_files=["res://.godot/imported/Healthedness.png-49a545b5601069ac522632f161bad58a.s3tc.ctex"]
 
 [params]
 

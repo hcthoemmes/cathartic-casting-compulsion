@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqed1uh1y4471"
-path="res://.godot/imported/progressfish.png-26fd63dc7ea214e03ba1670b8dc7322d.ctex"
+uid="uid://diidnhxc5svls"
+path="res://.godot/imported/boxcheck.png-e2c5f5a2bf0faad54a690676c5a5c546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://progressfish.png"
-dest_files=["res://.godot/imported/progressfish.png-26fd63dc7ea214e03ba1670b8dc7322d.ctex"]
+source_file="res://Sprites/boxcheck.png"
+dest_files=["res://.godot/imported/boxcheck.png-e2c5f5a2bf0faad54a690676c5a5c546.ctex"]
 
 [params]
 
