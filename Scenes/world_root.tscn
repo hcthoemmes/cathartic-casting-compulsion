@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd6ja7rjfssot"]
+[gd_scene load_steps=11 format=3 uid="uid://dd6ja7rjfssot"]
 
-[ext_resource type="PackedScene" uid="uid://7djbde0b07qh" path="res://Scenes/angelo.tscn" id="1_y8phq"]
+[ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PlaneMesh" uid="uid://dym55y8w2tm52" path="res://Resources/floormesh.tres" id="2_dh6nh"]
 [ext_resource type="Texture2D" uid="uid://fwf2dwcjm7ro" path="res://Sprites/Healthedness.png" id="3_du0hl"]
 [ext_resource type="Material" uid="uid://dt3df25vq5kpv" path="res://Resources/groundmaterial.tres" id="3_igpd5"]
+[ext_resource type="Script" uid="uid://c8dvyt6f35146" path="res://Scripts/music_player.gd" id="3_jn818"]
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
-[ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_rooha"]
+[ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
+[ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_favqm"]
 
@@ -21,13 +23,10 @@ position = Vector2(260, 101)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_du0hl")
 
-[node name="angelo" parent="." instance=ExtResource("1_y8phq")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 1, 0)
-
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="angelo"]
-transform = Transform3D(-0.707107, 0, 0.707107, -0.183013, 0.965926, -0.183013, -0.683013, -0.258819, -0.683013, 0, 5, 5.65685)
-remote_path = NodePath("../../Camera3D")
-update_rotation = false
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_b3nlw")
+autoplay = true
+script = ExtResource("3_jn818")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.272, 0)
@@ -36,15 +35,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.
 shape = SubResource("WorldBoundaryShape3D_favqm")
 
 [node name="Floormesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.21197e-08, 0, -7.725, 0, 7.725, 0, 7.725, 0, 9.21197e-08, 0, 0, 0)
+transform = Transform3D(-3.3767e-07, 0, -7.725, 0, 7.725, 0, 7.725, 0, -3.3767e-07, 0, 0, 0)
 mesh = ExtResource("2_dh6nh")
 surface_material_override/0 = ExtResource("3_igpd5")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.707107, 0.408607, -0.577096, 0, 0.816137, 0.577858, 0.707107, 0.408607, -0.577096, -4, 6, -4)
-projection = 1
-current = true
-size = 12.0
 
 [node name="FishinHole" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
@@ -56,8 +49,13 @@ shape = SubResource("BoxShape3D_t731x")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="FishinHole"]
 mesh = ExtResource("5_uakgf")
 
-[node name="AnimatedHero" parent="." instance=ExtResource("6_rooha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+[node name="CameraRig" parent="." instance=ExtResource("6_rooha")]
 
-[connection signal="body_entered" from="FishinHole" to="angelo" method="_on_fishin_hole_body_entered"]
-[connection signal="body_exited" from="FishinHole" to="angelo" method="_on_fishin_hole_body_exited"]
+[node name="AnimatedHero" parent="." instance=ExtResource("6_161yy")]
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="AnimatedHero"]
+remote_path = NodePath("../../CameraRig")
+
+[connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
+[connection signal="body_entered" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_entered"]
+[connection signal="body_exited" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_exited"]
