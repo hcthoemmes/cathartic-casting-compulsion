@@ -1,6 +1,7 @@
-[gd_scene load_steps=46 format=4 uid="uid://1ruxle3orpcj"]
+[gd_scene load_steps=48 format=4 uid="uid://1ruxle3orpcj"]
 
 [ext_resource type="Texture2D" uid="uid://bbccve2qlh3tw" path="res://Models/fighterhero_walk_better_head_color.png" id="1_70bt1"]
+[ext_resource type="Script" uid="uid://cnkuns8q5piti" path="res://Scripts/herocontrol.gd" id="1_fmcis"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5jrk"]
 
@@ -1359,7 +1360,10 @@ _data = {
 &"WalkAction": SubResource("Animation_ddc5v")
 }
 
-[node name="AnimatedHero" type="Node3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70bt1"]
+
+[node name="AnimatedHero" type="CharacterBody3D"]
+script = ExtResource("1_fmcis")
 
 [node name="fighterhero_walk" type="Node3D" parent="."]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
@@ -1693,19 +1697,11 @@ skin = SubResource("Skin_x6ki5")
 mesh = SubResource("ArrayMesh_rkrdo")
 skin = SubResource("Skin_x6ki5")
 
-[node name="FrontRef" type="Node3D" parent="fighterhero_walk"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, -5.51257)
-
-[node name="RightRef" type="Node3D" parent="fighterhero_walk"]
-transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 3.09482, 0, 0)
-
-[node name="SideUnder" type="Node3D" parent="fighterhero_walk"]
-transform = Transform3D(1.19209e-07, -1, -1.19209e-07, 0, 1.19209e-07, -1, 1, 1.19209e-07, 0, 1.60505, 0, 0)
-
-[node name="FrontUnder" type="Node3D" parent="fighterhero_walk"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, -4.23418)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="fighterhero_walk"]
 libraries = {
 &"": SubResource("AnimationLibrary_am5yk")
 }
+
+[node name="CapsuleShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_70bt1")
