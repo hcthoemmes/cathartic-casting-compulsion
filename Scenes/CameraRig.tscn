@@ -2,10 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bonb2x3nihquq" path="res://Scripts/camera_rig.gd" id="1_rgqtk"]
 
-[node name="CameraRig" type="Marker3D"]
+[node name="CameraRig" type="Node3D"]
 script = ExtResource("1_rgqtk")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-projection = 1
-current = true
-size = 12.0

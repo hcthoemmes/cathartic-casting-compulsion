@@ -11,7 +11,7 @@ var is_fishing		 := false
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor(): velocity += get_gravity() * delta
-	
+
 	# If outside fishing minigame, get input
 	if !is_fishing:
 
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
 			# Little hack, not actually what we wanna do cause it won't work for interaction and stuff but fine for a test :]
-			$joint0.rotation.y = atan2(velocity.x,velocity.z) # - deg_to_rad(45)
+			$joint0.rotation.y = atan2(velocity.x,velocity.z) + deg_to_rad(135)
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -40,6 +40,8 @@ func begin_fishing() -> void:
 	get_node("../CanvasLayer").add_child(f)
 
 func _on_fishin_hole_body_entered(body: Node3D) -> void: 
-	if body == self: fishing_possible = true
+	if body == self:
+		fishing_possible = true
 func _on_fishin_hole_body_exited(body: Node3D) -> void: 
-	if body == self: fishing_possible = false
+	if body == self:
+		fishing_possible = false
