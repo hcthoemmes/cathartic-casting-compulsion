@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhux156d2h6gq"]
+[gd_scene load_steps=10 format=3 uid="uid://dhux156d2h6gq"]
 
-[ext_resource type="Script" uid="uid://cvcma5eupq5g2" path="res://Scripts/fishing.gd" id="1_aamv5"]
+[ext_resource type="Script" uid="uid://bbyn8yjsye2yi" path="res://Scripts/fishing.gd" id="1_aamv5"]
 [ext_resource type="Texture2D" uid="uid://ddcrjprppk0sb" path="res://Sprites/hookbox.png" id="1_av1u1"]
-[ext_resource type="Script" uid="uid://bveklijdgrp37" path="res://Scripts/progress_bar.gd" id="2_6qjx5"]
 [ext_resource type="Texture2D" uid="uid://b3nbs4wnyvjpg" path="res://Sprites/progressbackground.png" id="2_aamv5"]
 [ext_resource type="Texture2D" uid="uid://cqed1uh1y4471" path="res://Sprites/progressfish.png" id="3_f6wi8"]
-[ext_resource type="Script" uid="uid://b0fcqiwpx2lu1" path="res://Scripts/darting_fish.gd" id="5_av1u1"]
+[ext_resource type="Script" uid="uid://bveklijdgrp37" path="res://Scripts/progress_bar.gd" id="3_lym3h"]
 [ext_resource type="Texture2D" uid="uid://blek2oel2u1oh" path="res://Sprites/dartingfish.png" id="5_lym3h"]
+[ext_resource type="Script" path="res://Scripts/darting_fish.gd" id="7_6qjx5"]
 [ext_resource type="Texture2D" uid="uid://diidnhxc5svls" path="res://Sprites/boxcheck.png" id="7_7hb1t"]
-[ext_resource type="Texture2D" uid="uid://eg6413o7ytuy" path="res://Sprites/salmon.png" id="7_lym3h"]
-[ext_resource type="Script" uid="uid://c7xuhfa728skk" path="res://Scripts/result.gd" id="8_lym3h"]
+[ext_resource type="Script" path="res://Scripts/result.gd" id="9_fxxqf"]
 
 [node name="Fishing" type="Node2D"]
 script = ExtResource("1_aamv5")
@@ -18,7 +17,7 @@ script = ExtResource("1_aamv5")
 clip_children = 2
 position = Vector2(964, 324)
 texture = ExtResource("2_aamv5")
-script = ExtResource("2_6qjx5")
+script = ExtResource("3_lym3h")
 
 [node name="ProgressFish" type="Sprite2D" parent="ProgressBar"]
 position = Vector2(0, -332)
@@ -34,16 +33,15 @@ offset_bottom = 1000.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_av1u1")
 
-[node name="Fish" type="Sprite2D" parent="HookBox"]
+[node name="DartingFish" type="Sprite2D" parent="HookBox"]
 position = Vector2(250, 250)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_lym3h")
-script = ExtResource("5_av1u1")
-image = ExtResource("7_lym3h")
+script = ExtResource("7_6qjx5")
 
 [node name="Result" type="Sprite2D" parent="HookBox"]
 visible = false
 position = Vector2(250, 250)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_7hb1t")
-script = ExtResource("8_lym3h")
+script = ExtResource("9_fxxqf")

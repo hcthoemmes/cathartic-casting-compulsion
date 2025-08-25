@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var fish = $HookBox/Fish
+@onready var fish = $HookBox/DartingFish
 @onready var result: Sprite2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
 

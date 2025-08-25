@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var progress_fish: Sprite2D = $ProgressFish
-@onready var fish: Sprite2D = $"../HookBox/Fish"
+@onready var fish: Sprite2D = $"../HookBox/DartingFish"
 @onready var fishing: Node2D = $".."
 
 var escape_y
