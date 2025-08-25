@@ -4,11 +4,15 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var animPlayer = $fighterhero_walk/AnimationPlayer
+@onready var rod		= $fighterhero_walk/rig/Skeleton3D/Rod
 
 # There's some stuff I added that could/should be handled in a singleton (fishing state, scene loading)
 # I'll fix it later ÷P
 var fishing_possible := false
 var is_fishing		 := false
+
+func _ready() -> void:
+	rod.hide()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -22,8 +26,13 @@ func _physics_process(delta: float) -> void:
 				# Lerp to some Fishin Point? Later feature
 			
 		var input_dir := Input.get_vector("west", "east", "north", "south")
-		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		if direction:
+		var direction := Vector3(
+			input_dir.x - input_dir.y,
+			0,
+			input_dir.x + input_dir.y
+		)
+		
+		if input_dir:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
 			# Little hack, not actually what we wanna do cause it won't work for interaction and stuff but fine for a test :]
@@ -44,6 +53,7 @@ func begin_fishing() -> void:
 	set_velocity(Vector3.ZERO)
 	
 	is_fishing = true
+	rod.show()
 	animPlayer.play("CastRod")
 	await animPlayer.animation_finished
 	# We want them to hold their pose, but for now it's fine
