@@ -10,15 +10,12 @@ const JUMP_VELOCITY = 4.5
 var fishing_possible := false
 var is_fishing		 := false
 
-
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor(): velocity += get_gravity() * delta
 	
 	# If outside fishing minigame, get input
 	if !is_fishing:
-
 		if fishing_possible:
 			if Input.is_action_just_pressed("use"):
 				await begin_fishing()
@@ -37,14 +34,14 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 			animPlayer.play("IdleStand")
 
-	move_and_slide()
+		move_and_slide()
 
 func begin_fishing() -> void:
 	# 5 and 20 as a guess.
 	var waitTime = randi_range(5, 20)
+	var f = load("res://Scenes/fishing.tscn").instantiate()
 	
 	set_velocity(Vector3.ZERO)
-	move_and_slide()
 	
 	is_fishing = true
 	animPlayer.play("CastRod")
@@ -52,7 +49,7 @@ func begin_fishing() -> void:
 	# We want them to hold their pose, but for now it's fine
 	
 	await get_tree().create_timer(waitTime).timeout
-	var f = load("res://Scenes/fishing.tscn").instantiate()
+	# In the time between ↑ there and ↓ there, it accepts movement for a second. Hmmmm
 	get_node("../CanvasLayer").add_child(f)
 
 func _on_fishin_hole_body_entered(body: Node3D) -> void: 
