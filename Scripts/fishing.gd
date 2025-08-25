@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var fish = $HookBox/DartingFish
 @onready var result: Sprite2D = $HookBox/Result

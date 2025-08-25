@@ -1,21 +1,19 @@
 extends Sprite2D
 
+@export var data: FishData: set = _set_data
+var size: int
+var difficulty: int
+var pull_strength: int
+var image: Texture2D
+
 var start_position: Vector2
 var pull_direction: Vector2
 var max_response_time: float = 1.8
 var min_response_time: float = 0.7
-
-# resource vars
-var size: int
-var difficulty: int = 2 # between 0 and 4
-var pull_strength := 50
-@export var image: Texture2D
-
 var max_difficulty: int = 4 
 var response_time: float
 var sprite_direction := Vector2.LEFT
 var status = "waiting"
-
 var tween 
 var revealed = false
 
@@ -67,3 +65,10 @@ func reveal() -> void:
 func reset() -> void:
 	position = start_position
 	rotation = 0
+	
+func _set_data(value) -> void:
+	data = value
+	size = data.size
+	difficulty = data.difficulty
+	pull_strength = data.pull_strength
+	image = data.image
