@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dd6ja7rjfssot"]
+[gd_scene load_steps=14 format=3 uid="uid://dd6ja7rjfssot"]
 
 [ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PlaneMesh" uid="uid://dym55y8w2tm52" path="res://Resources/floormesh.tres" id="2_dh6nh"]
@@ -9,12 +9,30 @@
 [ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3nlw"]
+sky_top_color = Color(0.657341, 0.784634, 1, 1)
+sky_horizon_color = Color(1.00268, 1.02676, 1.0716, 1)
+ground_horizon_color = Color(1.00268, 1.02676, 1.0716, 1)
+energy_multiplier = 0.4
+
+[sub_resource type="Sky" id="Sky_jn818"]
+sky_material = SubResource("ProceduralSkyMaterial_b3nlw")
+
+[sub_resource type="Environment" id="Environment_hej2r"]
+background_mode = 2
+sky = SubResource("Sky_jn818")
+tonemap_mode = 2
+glow_enabled = true
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_favqm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t731x"]
 size = Vector3(3, 3, 3)
 
 [node name="WorldRoot" type="StaticBody3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hej2r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
