@@ -1604,7 +1604,7 @@ bones/32/rotation = Quaternion(0.999998, 3.43673e-18, -0.00192721, -5.47647e-17)
 bones/32/scale = Vector3(1, 1, 1)
 
 [node name="Rod" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(1, 5.21541e-07, -5.9139e-08, -3.8743e-07, 1, -1.15833e-07, -5.54137e-08, 2.86382e-08, 1, 0.734108, 1.77406, 1.20372)
+transform = Transform3D(1, 2.23517e-06, 1.06636e-07, -2.07126e-06, 1, 8.22358e-07, -8.56817e-08, -8.44127e-07, 1, 0.734107, 1.77406, 1.20373)
 bone_name = "Rod"
 bone_idx = 11
 
@@ -1613,7 +1613,7 @@ mesh = SubResource("ArrayMesh_2l4ij")
 skeleton = NodePath("")
 
 [node name="cuirass" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(0.99986, 0.000389147, 0.0167023, 0.0167008, 0.0035356, -0.999854, -0.000448143, 0.999994, 0.00352862, -2.42144e-08, 7.15256e-07, 1.19209e-07)
+transform = Transform3D(0.99986, 0.000389134, 0.0167023, 0.0167008, 0.00353634, -0.999854, -0.000448143, 0.999994, 0.00352936, -7.91624e-08, 7.15256e-07, 1.78814e-06)
 bone_name = "cuirass"
 bone_idx = 17
 
@@ -1622,7 +1622,7 @@ mesh = SubResource("ArrayMesh_mh2mp")
 skeleton = NodePath("")
 
 [node name="arm strap" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(0.99986, -0.0167023, 0.000389147, 0.0167008, 0.999854, 0.0035356, -0.000448143, -0.00352862, 0.999994, -2.42144e-08, 7.15256e-07, 1.19209e-07)
+transform = Transform3D(0.99986, -0.0167023, 0.000389134, 0.0167008, 0.999854, 0.00353634, -0.000448143, -0.00352936, 0.999994, -7.91624e-08, 7.15256e-07, 1.78814e-06)
 bone_name = "arm strap"
 bone_idx = 18
 
@@ -1631,7 +1631,7 @@ mesh = SubResource("ArrayMesh_k6t0o")
 skeleton = NodePath("")
 
 [node name="armguard" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(0.99986, -0.0167023, 0.000389153, 0.0167008, 0.999854, 0.00353524, -0.000448143, -0.00352827, 0.999994, -2.42144e-08, 7.15256e-07, 1.19209e-07)
+transform = Transform3D(0.99986, -0.0167023, 0.000389134, 0.0167008, 0.999854, 0.00353634, -0.000448143, -0.00352936, 0.999994, -7.91624e-08, 7.15256e-07, 1.78814e-06)
 bone_name = "armguard"
 bone_idx = 19
 
@@ -1640,7 +1640,7 @@ mesh = SubResource("ArrayMesh_rea63")
 skeleton = NodePath("")
 
 [node name="skirt" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(0.99986, -0.0167023, 0.000389153, 0.0167008, 0.999854, 0.00353524, -0.000448143, -0.00352827, 0.999994, -2.42144e-08, 7.15256e-07, 1.19209e-07)
+transform = Transform3D(0.99986, -0.0167023, 0.000389134, 0.0167008, 0.999854, 0.00353634, -0.000448143, -0.00352936, 0.999994, -7.91624e-08, 7.15256e-07, 1.78814e-06)
 bone_name = "skirt"
 bone_idx = 20
 
@@ -1649,7 +1649,7 @@ mesh = SubResource("ArrayMesh_nvjp7")
 skeleton = NodePath("")
 
 [node name="straps" type="BoneAttachment3D" parent="fighterhero_walk/rig/Skeleton3D"]
-transform = Transform3D(0.99986, 0.000389147, 0.0167023, 0.0167008, 0.0035356, -0.999854, -0.000448143, 0.999994, 0.00352862, -2.42144e-08, 7.15256e-07, 1.19209e-07)
+transform = Transform3D(0.99986, 0.000389134, 0.0167023, 0.0167008, 0.00353634, -0.999854, -0.000448143, 0.999994, 0.00352936, -7.91624e-08, 7.15256e-07, 1.78814e-06)
 bone_name = "straps"
 bone_idx = 21
 

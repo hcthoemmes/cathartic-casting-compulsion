@@ -1,7 +1,7 @@
 extends Control
 
 @onready var fish = $HookBox/DartingFish
-@onready var result: Sprite2D = $HookBox/Result
+@onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
 
 var results = []

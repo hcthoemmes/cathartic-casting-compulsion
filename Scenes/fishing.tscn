@@ -14,6 +14,8 @@
 [node name="Fishing" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_aamv5")
 
 [node name="ProgressBar" type="Sprite2D" parent="."]
@@ -21,6 +23,21 @@ clip_children = 2
 position = Vector2(964, 324)
 texture = ExtResource("2_aamv5")
 script = ExtResource("3_lym3h")
+
+[node name="Background" type="TextureRect" parent="ProgressBar"]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -554.5
+offset_right = -303.0
+offset_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_aamv5")
 
 [node name="ProgressFish" type="Sprite2D" parent="ProgressBar"]
 position = Vector2(0, -332)
@@ -35,6 +52,7 @@ offset_right = 1000.0
 offset_bottom = 1000.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_av1u1")
+metadata/_edit_use_anchors_ = true
 
 [node name="DartingFish" type="Sprite2D" parent="HookBox"]
 position = Vector2(250, 250)
