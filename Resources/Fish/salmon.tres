@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_wwa02")
-size = 0
+size = 2
 difficulty = 2
-pull_strength = 50
+strength = 3
 image = ExtResource("1_pn63s")
 metadata/_custom_type_script = "uid://cuyp77p11pre3"

@@ -3,14 +3,14 @@ extends Sprite2D
 @export var data: FishData: set = _set_data
 var size: int
 var difficulty: int
-var pull_strength: int
+var strength: int
 var image: Texture2D
 
 var start_position: Vector2
 var pull_direction: Vector2
-var max_response_time: float = 1.8
+var pull_distance: int
+var max_response_time: float = 1.5
 var min_response_time: float = 0.7
-var max_difficulty: int = 4 
 var response_time: float
 var sprite_direction := Vector2.LEFT
 var status = "waiting"
@@ -19,11 +19,13 @@ var revealed = false
 
 func _ready() -> void:
 	start_position = position
+	pull_distance = strength * 15
 	response_time = max_response_time - (
-		((max_response_time - min_response_time) / max_difficulty) \
+		((max_response_time - min_response_time) / 4) \
 		* difficulty
 	)
-	# TO-DO: scale sprite based on size
+	scale.x *= float(size) / 2
+	scale.y *= float(size) / 2
 
 func _physics_process(_delta: float) -> void:
 	if status == "waiting" and not (tween and tween.is_running):
@@ -51,7 +53,7 @@ func pull() -> void:
 	rotation = pull_direction.angle() - sprite_direction.angle()
 	tween = create_tween().set_loops()
 	var start = start_position
-	var end = start + pull_direction * pull_strength
+	var end = start + pull_direction * pull_distance
 	tween.tween_property(self, "position", end, 0.5)
 	tween.tween_property(self, "position", start, 0.25)
 	
@@ -70,5 +72,5 @@ func _set_data(value) -> void:
 	data = value
 	size = data.size
 	difficulty = data.difficulty
-	pull_strength = data.pull_strength
+	strength = data.strength
 	image = data.image
