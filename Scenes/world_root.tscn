@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dd6ja7rjfssot"]
+[gd_scene load_steps=15 format=3 uid="uid://di2kyclfwk28h"]
 
 [ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PlaneMesh" uid="uid://dym55y8w2tm52" path="res://Resources/floormesh.tres" id="2_dh6nh"]
@@ -8,6 +8,7 @@
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
 [ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
+[ext_resource type="PackedScene" uid="uid://dkhmlv3ttbgtn" path="res://Scenes/fishingscape.tscn" id="9_jn818"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3nlw"]
 sky_top_color = Color(0.657341, 0.784634, 1, 1)
@@ -54,6 +55,7 @@ shape = SubResource("WorldBoundaryShape3D_favqm")
 
 [node name="Floormesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.3767e-07, 0, -7.725, 0, 7.725, 0, 7.725, 0, -3.3767e-07, 0, 0, 0)
+visible = false
 mesh = ExtResource("2_dh6nh")
 surface_material_override/0 = ExtResource("3_igpd5")
 
@@ -73,6 +75,9 @@ mesh = ExtResource("5_uakgf")
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="AnimatedHero"]
 remote_path = NodePath("../../CameraRig")
+
+[node name="fishingscape" parent="." instance=ExtResource("9_jn818")]
+transform = Transform3D(-1.75952e-08, 0, -0.402531, 0, 0.402531, 0, 0.402531, 0, -1.75952e-08, -11, 0, -2)
 
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
 [connection signal="body_entered" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_entered"]

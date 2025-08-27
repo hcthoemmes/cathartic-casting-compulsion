@@ -1,9 +1,9 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt3df25vq5kpv"]
 
-[ext_resource type="Texture2D" uid="uid://c406rds60ucml" path="res://Resources/grasstexture.png" id="1_qtbol"]
+[ext_resource type="Texture2D" uid="uid://dacpkrhqlkf86" path="res://Resources/groundtexture.png" id="1_rc4nt"]
 
 [resource]
-albedo_texture = ExtResource("1_qtbol")
+albedo_texture = ExtResource("1_rc4nt")
 uv1_scale = Vector3(4.15, 4.15, 4.15)
 uv1_offset = Vector3(0.12, -0.005, 0.52)
 uv1_triplanar_sharpness = 0.594604

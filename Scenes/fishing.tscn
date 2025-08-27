@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://blek2oel2u1oh" path="res://Sprites/dartingfish.png" id="5_lym3h"]
 [ext_resource type="Script" uid="uid://b0fcqiwpx2lu1" path="res://Scripts/darting_fish.gd" id="7_6qjx5"]
 [ext_resource type="Texture2D" uid="uid://diidnhxc5svls" path="res://Sprites/boxcheck.png" id="7_7hb1t"]
-[ext_resource type="Resource" uid="uid://0uh5bbfdve3i" path="res://Resources/Fish/octopus.tres" id="8_6qjx5"]
+[ext_resource type="Resource" uid="uid://cibml8ho8wr7t" path="res://Resources/Fish/octopus.tres" id="8_6qjx5"]
 [ext_resource type="Script" uid="uid://c7xuhfa728skk" path="res://Scripts/result.gd" id="9_fxxqf"]
 
 [node name="Fishing" type="Control"]
