@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdlpq7a6ef56y"
-path.s3tc="res://.godot/imported/fishingscape_piertexture.png-5d9d03e4655616d896b4ea20e51ed749.s3tc.ctex"
+uid="uid://d340ncsnjv61f"
+path.s3tc="res://.godot/imported/fishingscape_grass_piertexture2.png-788014cb34a5ed7b805cfc7faf050f99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "374724fe998ce00a1af2fcd1fab3f4ad"
+"md5": "2907d991e14287ad8c32b635be739ffd"
 }
 
 [deps]
 
-source_file="res://Models/landscape/fishingscape_piertexture.png"
-dest_files=["res://.godot/imported/fishingscape_piertexture.png-5d9d03e4655616d896b4ea20e51ed749.s3tc.ctex"]
+source_file="res://Models/landscape/fishingscape_grass_piertexture2.png"
+dest_files=["res://.godot/imported/fishingscape_grass_piertexture2.png-788014cb34a5ed7b805cfc7faf050f99.s3tc.ctex"]
 
 [params]
 

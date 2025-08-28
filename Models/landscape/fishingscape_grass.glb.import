@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cx3f8lcvvy8wc"
-path="res://.godot/imported/fishingscape.glb-09c017029f3eb700ab684bfe63902d54.scn"
+uid="uid://dvdev40l5xgwn"
+path="res://.godot/imported/fishingscape_grass.glb-3e7657610097c8e67dedf12acc04e3e6.scn"
 
 [deps]
 
-source_file="res://Models/landscape/fishingscape.glb"
-dest_files=["res://.godot/imported/fishingscape.glb-09c017029f3eb700ab684bfe63902d54.scn"]
+source_file="res://Models/landscape/fishingscape_grass.glb"
+dest_files=["res://.godot/imported/fishingscape_grass.glb-3e7657610097c8e67dedf12acc04e3e6.scn"]
 
 [params]
 
