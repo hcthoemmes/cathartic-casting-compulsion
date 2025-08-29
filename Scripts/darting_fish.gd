@@ -1,6 +1,7 @@
-extends Sprite2D
+class_name DartingFish extends Sprite2D
 
 @export var data: FishData: set = _set_data
+var species: String
 var size: int
 var difficulty: int
 var strength: int

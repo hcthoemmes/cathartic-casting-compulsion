@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_bws80")
+name = "octopus"
 size = 3
 difficulty = 3
 strength = 5

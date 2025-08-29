@@ -4,6 +4,8 @@ extends Control
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
 
+@export var fishing_log_data: FishingLogData
+
 var results = []
 var failures = 0
 var reel_direction: Vector2
@@ -14,7 +16,15 @@ var success_step := 0.5
 
 
 func _ready() -> void:
+	# debugging purposes ------------------------------------------------------
+	fishing_log_data.load_entries()
+	var entries = fishing_log_data.entries
+	for entry in entries:
+		print(entry.name)
+	# end debug ---------------------------------------------------------------
+	
 	next_round()
+	
 
 func _physics_process(_delta: float) -> void:
 	# if fish is pulling, player can attempt to reel it in
@@ -57,6 +67,7 @@ func round_lost():
 
 func fish_caught() -> void:
 	fish.status = "caught"
+	fish.data.caught += 1
 	fish.reset()
 
 func fish_escaped() -> void:

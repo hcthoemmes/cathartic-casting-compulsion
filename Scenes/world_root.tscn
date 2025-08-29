@@ -8,7 +8,7 @@
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
 [ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
-[ext_resource type="PackedScene" uid="uid://bbshcl88x300e" path="res://Scenes/fishingscape.tscn" id="9_jn818"]
+[ext_resource type="PackedScene" uid="uid://dkhmlv3ttbgtn" path="res://Scenes/fishingscape.tscn" id="9_jn818"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3nlw"]
 sky_top_color = Color(0.657341, 0.784634, 1, 1)

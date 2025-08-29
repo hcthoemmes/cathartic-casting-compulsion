@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhux156d2h6gq"]
+[gd_scene load_steps=13 format=3 uid="uid://dhux156d2h6gq"]
 
-[ext_resource type="Script" uid="uid://bbyn8yjsye2yi" path="res://Scripts/fishing.gd" id="1_aamv5"]
+[ext_resource type="Script" uid="uid://bbyn8yjsye2yi" path="res://Scripts/fishing.gd" id="1_6qjx5"]
 [ext_resource type="Texture2D" uid="uid://ddcrjprppk0sb" path="res://Sprites/hookbox.png" id="1_av1u1"]
 [ext_resource type="Texture2D" uid="uid://b3nbs4wnyvjpg" path="res://Sprites/progressbackground.png" id="2_aamv5"]
+[ext_resource type="Script" uid="uid://cnu5y05lwy7m8" path="res://Scripts/fishing_log_data.gd" id="2_fxxqf"]
 [ext_resource type="Texture2D" uid="uid://cqed1uh1y4471" path="res://Sprites/progressfish.png" id="3_f6wi8"]
 [ext_resource type="Script" uid="uid://bveklijdgrp37" path="res://Scripts/progress_bar.gd" id="3_lym3h"]
 [ext_resource type="Texture2D" uid="uid://blek2oel2u1oh" path="res://Sprites/dartingfish.png" id="5_lym3h"]
@@ -11,12 +12,17 @@
 [ext_resource type="Resource" uid="uid://cibml8ho8wr7t" path="res://Resources/Fish/octopus.tres" id="8_6qjx5"]
 [ext_resource type="Script" uid="uid://c7xuhfa728skk" path="res://Scripts/result.gd" id="9_fxxqf"]
 
+[sub_resource type="Resource" id="Resource_75f4r"]
+script = ExtResource("2_fxxqf")
+metadata/_custom_type_script = "uid://cnu5y05lwy7m8"
+
 [node name="Fishing" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_aamv5")
+script = ExtResource("1_6qjx5")
+fishing_log_data = SubResource("Resource_75f4r")
 
 [node name="ProgressBar" type="Sprite2D" parent="."]
 clip_children = 2
