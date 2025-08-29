@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://btmx55hxmi1c0"]
+
+[ext_resource type="Script" uid="uid://dlkp16tn2rws5" path="res://Scripts/map_ui.gd" id="1_4vb7h"]
+[ext_resource type="Texture2D" uid="uid://dno7te1n2pvby" path="res://Sprites/mapUI.png" id="1_u71yq"]
+[ext_resource type="Texture2D" uid="uid://cejj5awi7sxxs" path="res://Sprites/mapmarker.png" id="2_r2k0d"]
+[ext_resource type="FontFile" uid="uid://b7m5suxr0hymw" path="res://Resources/Fonts/SOCOND__.ttf" id="4_hobna"]
+[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SOBAD___.ttf" id="5_mfkea"]
+
+[node name="MapUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4vb7h")
+
+[node name="MapSprite" type="Sprite2D" parent="."]
+position = Vector2(360, 240)
+texture = ExtResource("1_u71yq")
+
+[node name="MapMarker" type="Sprite2D" parent="."]
+position = Vector2(362, 166)
+texture = ExtResource("2_r2k0d")
+
+[node name="BouncePoint" type="Marker2D" parent="."]
+position = Vector2(362, 162)
+
+[node name="MapText" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 228.0
+offset_bottom = 125.0
+
+[node name="RegionLabel" type="RichTextLabel" parent="MapText"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 129.0
+offset_right = 334.0
+offset_bottom = 268.0
+scale = Vector2(0.283401, 0.283401)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 4
+theme_override_fonts/normal_font = ExtResource("4_hobna")
+theme_override_font_sizes/normal_font_size = 91
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RegionLabel2" type="RichTextLabel" parent="MapText"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 309.0
+offset_right = 658.0
+offset_bottom = 535.0
+scale = Vector2(0.283401, 0.283401)
+theme_override_colors/default_color = Color(0.70164, 0.593671, 0.463908, 1)
+theme_override_colors/font_shadow_color = Color(0.47676, 0.387132, 0.283654, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 4
+theme_override_fonts/normal_font = ExtResource("5_mfkea")
+theme_override_font_sizes/normal_font_size = 91
+text = " Land of Terragaiadrasil"
+horizontal_alignment = 1
+vertical_alignment = 1
