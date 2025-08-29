@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8fv8utx7spm2"]
+
+[ext_resource type="Texture2D" uid="uid://bd27kvdv7buv7" path="res://Models/landscape/grass/fishingscape3_piertexture.png" id="1_7efh2"]
+
+[resource]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_texture = ExtResource("1_7efh2")
+roughness = 0.5

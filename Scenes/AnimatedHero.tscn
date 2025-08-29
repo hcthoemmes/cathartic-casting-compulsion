@@ -1361,6 +1361,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70bt1"]
+radius = 0.386181
 
 [node name="AnimatedHero" type="CharacterBody3D"]
 script = ExtResource("1_fmcis")
