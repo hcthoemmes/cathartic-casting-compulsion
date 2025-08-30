@@ -4,7 +4,8 @@
 
 [resource]
 resource_name = "Material.001"
+transparency = 1
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 0.497838)
+albedo_color = Color(1, 1, 1, 0.15)
 albedo_texture = ExtResource("1_co2n3")
 roughness = 0.5

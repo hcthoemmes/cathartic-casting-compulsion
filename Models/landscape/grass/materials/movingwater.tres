@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://2q11hnk0uafh"]
+
+[ext_resource type="Shader" uid="uid://cj8aq2pthddtx" path="res://Models/landscape/grass/materials/mover.gdshader" id="1_nc3yp"]
+[ext_resource type="Texture2D" uid="uid://jihh0wkofdc4" path="res://Models/landscape/grass/fishingscape3_watertexture.png" id="2_u8c7v"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_nc3yp")
+shader_parameter/direction_and_speed = Vector2(0.065, 0)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/flip = false
+shader_parameter/transparency = 0.135
+shader_parameter/albedo = ExtResource("2_u8c7v")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c52e6aurmix1h"]
+
+[ext_resource type="Texture2D" uid="uid://lc6hesq5i711" path="res://Sprites/book_bg.png" id="1_7uop3"]
+
+[node name="FishEncyclopedia" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookBg" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(0.766746, 0.766746)
+texture = ExtResource("1_7uop3")

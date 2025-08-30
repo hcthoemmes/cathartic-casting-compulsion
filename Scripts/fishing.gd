@@ -3,6 +3,7 @@ extends Control
 @onready var fish = $HookBox/DartingFish
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
+@onready var m : AudioStreamPlayer = get_node("../../MusicPlayer")
 
 @export var fishing_log_data: FishingLogData
 
@@ -13,6 +14,7 @@ var progress := 0.0
 var progress_min = -2
 var failure_step := 1.0
 var success_step := 0.5
+var music_pause_point := 0.0
 
 
 func _ready() -> void:
@@ -22,6 +24,10 @@ func _ready() -> void:
 	for entry in entries:
 		print(entry.name)
 	# end debug ---------------------------------------------------------------
+	
+	music_pause_point = m.get_playback_position()
+	m.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
+	m.play()
 	
 	next_round()
 	
@@ -69,6 +75,7 @@ func fish_caught() -> void:
 	fish.status = "caught"
 	fish.data.caught += 1
 	fish.reset()
+	unload(true)
 
 func fish_escaped() -> void:
 	fish.status = "escaped"
@@ -76,4 +83,12 @@ func fish_escaped() -> void:
 	var tween = create_tween().tween_property(fish, "modulate:a", 0, 1)
 	await tween.finished
 	await get_tree().create_timer(1.0).timeout
+	unload(false)
+
+func unload(success: bool) -> void:
+	m.set_stream(load("res://Sound/Hyperfishation.wav"))
+	m.play(music_pause_point)
+	if success:
+		await $/root/WorldRoot/AnimatedHero.usebutton
+	GS.end_fishing()
 	queue_free()
