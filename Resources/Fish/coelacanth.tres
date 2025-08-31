@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://b018mqxojb1er"]
+
+[ext_resource type="Texture2D" uid="uid://c1myyyo3cqh0m" path="res://Sprites/coelacanth.png" id="1_htaxy"]
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_wnj24"]
+
+[resource]
+script = ExtResource("1_wnj24")
+name = "coelacanth"
+size = 4
+difficulty = 4
+strength = 4
+rarity = 4
+image = ExtResource("1_htaxy")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

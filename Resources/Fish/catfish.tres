@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=2 format=3 uid="uid://cy142gygequ6r"]
+
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_xfjt1"]
+
+[resource]
+script = ExtResource("1_xfjt1")
+name = "catfish"
+size = 3
+difficulty = 3
+strength = 0
+rarity = 3
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://c3mkmwsi3q3kv"]
+
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_i4p8u"]
+[ext_resource type="Texture2D" uid="uid://bpqf0p5imrxdb" path="res://Sprites/carp.png" id="1_lkbpf"]
+
+[resource]
+script = ExtResource("1_i4p8u")
+name = "carp"
+size = 2
+difficulty = 0
+strength = 0
+rarity = 0
+image = ExtResource("1_lkbpf")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

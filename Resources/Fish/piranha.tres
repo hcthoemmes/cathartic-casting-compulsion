@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://00upix1iv83a"]
+
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_cm46l"]
+[ext_resource type="Texture2D" uid="uid://cse1wh7fm1lvc" path="res://Sprites/pirhana.png" id="1_x384k"]
+
+[resource]
+script = ExtResource("1_cm46l")
+name = ""
+size = 0
+difficulty = 3
+strength = 3
+rarity = 3
+image = ExtResource("1_x384k")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

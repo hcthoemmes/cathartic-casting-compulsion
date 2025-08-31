@@ -1,0 +1,5 @@
+[gd_resource type="Theme" format=3 uid="uid://gmo4tiq3xoxx"]
+
+[resource]
+/colors/healthcolor = Color(0.933333, 0.305882, 0.294118, 1)
+/colors/manacolor = Color(0.247059, 0.466667, 0.913725, 1)

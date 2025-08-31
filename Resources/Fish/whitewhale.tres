@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bvyjmemjcnkms"]
+
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_oweo7"]
+[ext_resource type="Texture2D" uid="uid://bg1ibg3bjnh85" path="res://Sprites/bowhead.png" id="1_xwf08"]
+
+[resource]
+script = ExtResource("1_oweo7")
+name = "White Whale"
+size = 5
+difficulty = 5
+strength = 5
+rarity = 5
+image = ExtResource("1_xwf08")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

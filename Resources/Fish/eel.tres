@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://da2sq1cckpoa2"]
+
+[ext_resource type="Texture2D" uid="uid://bdaihpxob2r7r" path="res://Sprites/eel.png" id="1_uy6jm"]
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_vqwgr"]
+
+[resource]
+script = ExtResource("1_vqwgr")
+name = "eel"
+size = 4
+difficulty = 4
+strength = 0
+rarity = 2
+image = ExtResource("1_uy6jm")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"

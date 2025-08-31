@@ -2,7 +2,6 @@
 
 [ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PackedScene" uid="uid://btmx55hxmi1c0" path="res://Scenes/mapUI.tscn" id="2_jn818"]
-[ext_resource type="Texture2D" uid="uid://fwf2dwcjm7ro" path="res://Sprites/Healthedness.png" id="3_du0hl"]
 [ext_resource type="PackedScene" uid="uid://c52e6aurmix1h" path="res://Scenes/FishEncyclopedia.tscn" id="3_hej2r"]
 [ext_resource type="Script" uid="uid://c8dvyt6f35146" path="res://Scripts/music_player.gd" id="3_jn818"]
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
 [ext_resource type="PackedScene" uid="uid://0x2qw1iunmra" path="res://Scenes/fishingscape_3.tscn" id="8_b3nlw"]
 [ext_resource type="PackedScene" uid="uid://der25vntqcw4q" path="res://Models/bridge/betterbridge.glb" id="9_jn818"]
+[ext_resource type="PackedScene" uid="uid://c308besmqnera" path="res://Scenes/Healthedness.tscn" id="10_hej2r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3nlw"]
 sky_top_color = Color(0.657341, 0.784634, 1, 1)
@@ -50,11 +50,6 @@ data = PackedVector3Array(15.8636, -1.9008, 4.2896, 12.6709, -0.8515, -4.2897, 1
 environment = SubResource("Environment_hej2r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Healthedness" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(260, 101)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_du0hl")
 
 [node name="MapUI" parent="CanvasLayer" instance=ExtResource("2_jn818")]
 visible = false
@@ -148,6 +143,12 @@ transform = Transform3D(0.0487423, 0, -0.383841, 0, 0.386924, 0, 0.383841, 0, 0.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="betterbridge/Bridge/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hej2r")
+
+[node name="Healthedness" parent="." instance=ExtResource("10_hej2r")]
+offset_left = -14.0
+offset_top = 4.0
+offset_right = -14.0
+offset_bottom = 4.0
 
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
 [connection signal="body_entered" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_entered"]

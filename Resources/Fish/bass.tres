@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://br2pcw8myxs1c"]
+
+[ext_resource type="Texture2D" uid="uid://bye2mvfprtoss" path="res://Sprites/bass.png" id="1_cj8jk"]
+[ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_dcxj3"]
+
+[resource]
+script = ExtResource("1_dcxj3")
+name = "bass"
+size = 2
+difficulty = 0
+strength = 0
+rarity = 0
+image = ExtResource("1_cj8jk")
+metadata/_custom_type_script = "uid://cuyp77p11pre3"
