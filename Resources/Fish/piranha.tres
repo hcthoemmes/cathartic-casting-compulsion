@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_cm46l")
-name = ""
-size = 0
+name = "piranha"
+size = 1
 difficulty = 3
 strength = 3
 rarity = 3

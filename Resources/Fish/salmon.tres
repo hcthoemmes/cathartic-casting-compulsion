@@ -9,6 +9,6 @@ name = "salmon"
 size = 2
 difficulty = 2
 strength = 3
-rarity = 0
+rarity = 2
 image = ExtResource("1_pn63s")
 metadata/_custom_type_script = "uid://cuyp77p11pre3"

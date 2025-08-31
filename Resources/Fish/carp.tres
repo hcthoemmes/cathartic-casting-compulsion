@@ -9,6 +9,6 @@ name = "carp"
 size = 2
 difficulty = 0
 strength = 0
-rarity = 0
+rarity = 1
 image = ExtResource("1_lkbpf")
 metadata/_custom_type_script = "uid://cuyp77p11pre3"

@@ -18,13 +18,28 @@ var music_pause_point := 0.0
 
 
 func _ready() -> void:
+	var fishrng = RandomNumberGenerator.new() 
+	var weights = []
 	# debugging purposes ------------------------------------------------------
 	fishing_log_data.load_entries()
 	var entries = fishing_log_data.entries
 	for entry in entries:
+		match entry.rarity:
+			1:
+				weights.append(0.5)
+			2:
+				weights.append(0.25)
+			3:
+				weights.append(0.15)
+			4:
+				weights.append(0.08)
+			5:
+				weights.append(0.02)
 		print(entry.name)
+	print(weights)
+	fish._set_data(entries[fishrng.rand_weighted(weights)])
+	print("- ", fish.data.name)
 	# end debug ---------------------------------------------------------------
-	
 	music_pause_point = m.get_playback_position()
 	m.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
 	m.play()

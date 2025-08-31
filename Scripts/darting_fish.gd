@@ -25,8 +25,10 @@ func _ready() -> void:
 		((max_response_time - min_response_time) / 4) \
 		* difficulty
 	)
-	scale.x *= float(size) / 2
-	scale.y *= float(size) / 2
+	# Somehow the below equation evaluates to 0 if size 1
+	if size > 1:
+		scale.x *= float(size) / 2
+		scale.y *= float(size) / 2
 
 func _physics_process(_delta: float) -> void:
 	if status == "waiting" and not (tween and tween.is_running):

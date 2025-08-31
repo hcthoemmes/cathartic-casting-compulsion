@@ -13,6 +13,7 @@ func begin_fishing() -> void:
 	var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
 	var f = load("res://Scenes/fishing.tscn").instantiate()
 	
+	
 	h.set_velocity(Vector3.ZERO)
 	
 	is_fishing = true
