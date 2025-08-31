@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://di2kyclfwk28h"]
+[gd_scene load_steps=21 format=3 uid="uid://di2kyclfwk28h"]
 
 [ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PackedScene" uid="uid://btmx55hxmi1c0" path="res://Scenes/mapUI.tscn" id="2_jn818"]
+[ext_resource type="PackedScene" uid="uid://jfpcmr7pq2ju" path="res://Scenes/TextBox.tscn" id="2_usf31"]
 [ext_resource type="PackedScene" uid="uid://c52e6aurmix1h" path="res://Scenes/FishEncyclopedia.tscn" id="3_hej2r"]
 [ext_resource type="Script" uid="uid://c8dvyt6f35146" path="res://Scripts/music_player.gd" id="3_jn818"]
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
@@ -51,20 +52,30 @@ environment = SubResource("Environment_hej2r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MapUI" parent="CanvasLayer" instance=ExtResource("2_jn818")]
-visible = false
-offset_left = 96.5
-offset_right = 96.5
-scale = Vector2(1.35, 1.35)
-
-[node name="FishEncyclopedia" parent="CanvasLayer" instance=ExtResource("3_hej2r")]
-visible = false
-
 [node name="Healthedness" parent="CanvasLayer" instance=ExtResource("10_hej2r")]
 offset_left = -14.0
 offset_top = 4.0
 offset_right = -14.0
 offset_bottom = 4.0
+
+[node name="TextBox" parent="CanvasLayer" instance=ExtResource("2_usf31")]
+visible = false
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+visible = false
+z_index = 1
+offset_right = 1152.0
+offset_bottom = 650.0
+current_tab = 0
+
+[node name="MapUI" parent="CanvasLayer/TabContainer" instance=ExtResource("2_jn818")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="FishEncyclopedia" parent="CanvasLayer/TabContainer" instance=ExtResource("3_hej2r")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_b3nlw")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://jfpcmr7pq2ju"]
+
+[ext_resource type="Texture2D" uid="uid://fvbe6vi0qbxe" path="res://Sprites/textbox2.png" id="1_p7q1j"]
+
+[node name="TextBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Textbox" type="Sprite2D" parent="."]
+position = Vector2(592, 504)
+scale = Vector2(0.742813, 0.58373)
+texture = ExtResource("1_p7q1j")
+
+[node name="Name" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 380.0
+offset_right = 479.0
+offset_bottom = 420.0
+theme_override_font_sizes/normal_font_size = 20
+text = "No one in particular"
+horizontal_alignment = 1
+
+[node name="Contents" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 453.0
+offset_right = 1070.0
+offset_bottom = 564.0
+theme_override_font_sizes/normal_font_size = 26
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"

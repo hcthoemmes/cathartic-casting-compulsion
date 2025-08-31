@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TextBoxData" load_steps=2 format=3 uid="uid://dv6nms5rpwuhb"]
+
+[ext_resource type="Script" uid="uid://db7hs0wkijaa7" path="res://Scripts/text_box_data.gd" id="1_pcr7e"]
+
+[resource]
+script = ExtResource("1_pcr7e")
+mutable = true
+mut_index = 1
+mut_contents = Array[String](["but you think there's more here.", "but there's a hook just waiting for a baiting."])
+name = "Your Own Mind"
+contents = Array[String](["You consider going back to the village...", "DEFAULT TEXT"])
+metadata/_custom_type_script = "uid://db7hs0wkijaa7"

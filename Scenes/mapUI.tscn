@@ -9,23 +9,30 @@
 [node name="MapUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_top = -24.0
+offset_bottom = -24.0
 script = ExtResource("1_4vb7h")
 
 [node name="MapSprite" type="Sprite2D" parent="."]
-position = Vector2(360, 240)
+position = Vector2(584, 312)
+scale = Vector2(1.62108, 1.62108)
 texture = ExtResource("1_u71yq")
 
 [node name="MapMarker" type="Sprite2D" parent="."]
-position = Vector2(362, 166)
+position = Vector2(584, 184)
+scale = Vector2(1.62108, 1.62108)
 texture = ExtResource("2_r2k0d")
 
 [node name="BouncePoint" type="Marker2D" parent="."]
-position = Vector2(362, 162)
+position = Vector2(584, 176)
+scale = Vector2(1.62108, 1.62108)
 
 [node name="MapText" type="Control" parent="."]
 anchors_preset = 0
+offset_top = -72.0
 offset_right = 228.0
-offset_bottom = 125.0
+offset_bottom = 53.0
+scale = Vector2(1.62108, 1.62108)
 
 [node name="RegionLabel" type="RichTextLabel" parent="MapText"]
 layout_mode = 0
