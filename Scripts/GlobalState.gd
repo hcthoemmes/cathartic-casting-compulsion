@@ -1,6 +1,10 @@
 # controls state, scene loading/unloading.
 extends Node
 
+var timesFished := 0
+# If we can implement a text box, I want to utilize this
+# if player attempts to exit screen, the text changes depending on how much they've fished
+# You consider going to town, → [but you think there's more here] → [but you want to fish some more] → [but the river calls to you]
 var fishing_possible := false
 var is_fishing	 	 := false
 @onready var h = $/root/WorldRoot/AnimatedHero

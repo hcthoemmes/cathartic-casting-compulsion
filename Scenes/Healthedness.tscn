@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c308besmqnera"]
+
+[ext_resource type="Texture2D" uid="uid://drjasdhagy15r" path="res://Sprites/healthedness.png" id="1_4hkvy"]
+
+[node name="Healthedness" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI Frame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(303.518, 153.75)
+scale = Vector2(0.272685, 0.272685)
+texture = ExtResource("1_4hkvy")
+
+[node name="Health" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 51.0
+offset_right = 520.0
+offset_bottom = 82.0
+color = Color(0.933333, 0.305882, 0.294118, 1)
+
+[node name="Mana" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 91.0
+offset_right = 520.0
+offset_bottom = 112.0
+color = Color(0.247059, 0.466667, 0.913725, 1)
