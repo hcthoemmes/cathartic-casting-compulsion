@@ -19,16 +19,7 @@ var tween
 var revealed = false
 
 func _ready() -> void:
-	start_position = position
-	pull_distance = strength * 15
-	response_time = max_response_time - (
-		((max_response_time - min_response_time) / 4) \
-		* difficulty
-	)
-	# Somehow the below equation evaluates to 0 if size 1
-	if size > 1:
-		scale.x *= float(size) / 2
-		scale.y *= float(size) / 2
+	pass
 
 func _physics_process(_delta: float) -> void:
 	if status == "waiting" and not (tween and tween.is_running):
@@ -71,9 +62,21 @@ func reset() -> void:
 	position = start_position
 	rotation = 0
 	
-func _set_data(value) -> void:
+func _set_data(value) -> bool:
 	data = value
 	size = data.size
 	difficulty = data.difficulty
 	strength = data.strength
 	image = data.image
+	
+	start_position = position
+	pull_distance = strength * 15
+	response_time = max_response_time - (
+		((max_response_time - min_response_time) / 4) \
+		* difficulty
+	)
+	# Somehow the below equation evaluates to 0 if size 1
+	if size > 1:
+		scale.x *= float(size) / 2
+		scale.y *= float(size) / 2
+	return true

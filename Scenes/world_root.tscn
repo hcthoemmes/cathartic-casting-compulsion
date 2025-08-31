@@ -61,7 +61,6 @@ scale = Vector2(1.35, 1.35)
 visible = false
 
 [node name="Healthedness" parent="CanvasLayer" instance=ExtResource("10_hej2r")]
-modulate = Color(1, 1, 1, 0.756863)
 offset_left = -14.0
 offset_top = 4.0
 offset_right = -14.0
@@ -72,7 +71,8 @@ stream = ExtResource("2_b3nlw")
 autoplay = true
 script = ExtResource("3_jn818")
 
-[node name="Additional Collision" type="Node" parent="."]
+[node name="Additional Collision" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5732, 0, 30.0451)
 
 [node name="Bridge Side 1" type="StaticBody3D" parent="Additional Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8696, 0, -13.7355)
@@ -122,7 +122,7 @@ shape = SubResource("BoxShape3D_usf31")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 77, 37.272, 0)
 
 [node name="FishinHole" type="Area3D" parent="."]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 15.5255, 0, -12)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -12.0477, 0, 18.0451)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FishinHole"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
@@ -141,10 +141,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9679, 0, 0)
 remote_path = NodePath("../../CameraRig")
 
 [node name="fishingscape3" parent="." instance=ExtResource("8_b3nlw")]
-transform = Transform3D(-1.57361e-08, 0, -0.36, 0, 0.36, 0, 0.36, 0, -1.57361e-08, 0, 0, -3)
+transform = Transform3D(-1.57361e-08, 0, -0.36, 0, 0.36, 0, 0.36, 0, -1.57361e-08, -27.5732, 0, 27.0451)
 
 [node name="betterbridge" parent="." instance=ExtResource("9_jn818")]
-transform = Transform3D(0.0487423, 0, -0.383841, 0, 0.386924, 0, 0.383841, 0, 0.0487423, 36.4304, 0.750797, -19.5693)
+transform = Transform3D(0.0487423, 0, -0.383841, 0, 0.386924, 0, 0.383841, 0, 0.0487423, 8.85724, 0.750797, 10.4758)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="betterbridge/Bridge" index="0"]
 

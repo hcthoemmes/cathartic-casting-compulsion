@@ -10,13 +10,14 @@ var end_y = 220
 var distance
 var step
 
-func _ready() -> void:
+func prepare() -> bool:
 	escape_y = progress_fish.position.y
 	distance = end_y - escape_y
 	
 	step = distance / (fish.difficulty - fishing.progress_min)
 	start_y = escape_y + (step * 2)
 	progress_fish.position.y = start_y
+	return true
 
 func update(progress) -> void:
 	var new_y = start_y + (progress * step) 

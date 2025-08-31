@@ -37,7 +37,9 @@ func _ready() -> void:
 				weights.append(0.02)
 		print(entry.name)
 	print(weights)
-	fish._set_data(entries[fishrng.rand_weighted(weights)])
+	await fish._set_data(entries[fishrng.rand_weighted(weights)])
+	await progress_bar.prepare()
+	# Coroutines just for safety's sake
 	print("- ", fish.data.name)
 	# end debug ---------------------------------------------------------------
 	music_pause_point = m.get_playback_position()
