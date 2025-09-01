@@ -13,7 +13,7 @@ signal usebutton()
 
 func _ready() -> void:
 	rod.hide()
-	GS.show_text(load("res://Resources/Text/leave_northeast.tres"), 1)
+	#GS.show_text(load("res://Resources/Text/leave_northwest.tres"), 1)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -21,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	
 	# If outside fishing minigame or text box, get input
 	if GS.state == GS.PLAYER_STATE.WALKING:
-	#if !GS.is_fishing and !GS.is_in_text:
 		if GS.fishing_possible:
 			if Input.is_action_just_pressed("use"):
 				await GS.begin_fishing()

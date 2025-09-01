@@ -9,14 +9,14 @@ var timesFished := 0
 # You consider going to town, → [but you think there's more here] → [but you want to fish some more] → [but the river calls to you]
 @export var state = PLAYER_STATE.WALKING
 var fishing_possible := false
-var is_fishing	 	 := false
-var is_in_text		 := false
+#var is_fishing	 	 := false
+#var is_in_text		 := false
 @onready var h = $/root/WorldRoot/AnimatedHero
 @onready var t = $/root/WorldRoot/CanvasLayer/TextBox
 
 # Pass in data, index of replacement text in mut_contents if required
 func show_text(textdata: TextBoxData, changeto = null) -> void:
-	#@export var s
+
 	var name = t.get_node("Name")
 	var content = t.get_node("Contents")
 	state = PLAYER_STATE.IN_TEXT
@@ -26,25 +26,23 @@ func show_text(textdata: TextBoxData, changeto = null) -> void:
 	t.show()
 	for i in textdata.contents.size():
 		if textdata.mutable and i == textdata.mut_index:
-			textdata.contents[i] = textdata.mut_contents[changeto]
-		content = textdata.contents
+			if changeto != null:
+				textdata.contents[i] = textdata.mut_contents[changeto]
+		content.text = textdata.contents[i]
 		print(textdata.contents[i])
 		await h.usebutton
-
 		
-	print("We outie")
-	# Show text box item
-	# Change name and internal text
-	pass
+	t.hide()
+	state = PLAYER_STATE.WALKING
 
 func begin_fishing() -> void:
 	var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
 	var f = load("res://Scenes/fishing.tscn").instantiate()
 	
-	
 	h.set_velocity(Vector3.ZERO)
 	
-	is_fishing = true
+	state = PLAYER_STATE.FISHING
+	# is_fishing = true
 	h.rod.show()
 	h.animPlayer.play("CastRod")
 	await h.animPlayer.animation_finished
