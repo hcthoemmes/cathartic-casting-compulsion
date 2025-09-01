@@ -4,10 +4,10 @@ extends Node
 enum PLAYER_STATE { WALKING, FISHING, IN_TEXT, IN_UI }
 
 var timesFished := 0
-# If we can implement a text box, I want to utilize this
 # if player attempts to exit screen, the text changes depending on how much they've fished
 # You consider going to town, → [but you think there's more here] → [but you want to fish some more] → [but the river calls to you]
 @export var state = PLAYER_STATE.WALKING
+var laststate #To return to the correct state
 var fishing_possible := false
 #var is_fishing	 	 := false
 #var is_in_text		 := false
@@ -19,7 +19,9 @@ func show_text(textdata: TextBoxData, changeto = null) -> void:
 
 	var name = t.get_node("Name")
 	var content = t.get_node("Contents")
+	var s = state
 	state = PLAYER_STATE.IN_TEXT
+	print(s)
 	
 	name.text = textdata.name
 	content.text = textdata.contents[0]
@@ -33,7 +35,7 @@ func show_text(textdata: TextBoxData, changeto = null) -> void:
 		await h.usebutton
 		
 	t.hide()
-	state = PLAYER_STATE.WALKING
+	state = s
 
 func begin_fishing() -> void:
 	var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
@@ -56,3 +58,11 @@ func end_fishing() -> void:
 	timesFished += 1
 	state = PLAYER_STATE.WALKING
 	h.rod.hide()
+
+func open_ui() -> void:
+	laststate = state
+	state = PLAYER_STATE.IN_UI
+	$/root/WorldRoot/CanvasLayer/TabContainer.show()
+func close_ui() -> void:
+	$/root/WorldRoot/CanvasLayer/TabContainer.hide()
+	state = laststate

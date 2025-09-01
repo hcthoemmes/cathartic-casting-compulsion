@@ -103,9 +103,14 @@ func fish_escaped() -> void:
 	unload(false)
 
 func unload(success: bool) -> void:
+	var t = TextBoxData.new()
 	m.set_stream(load("res://Sound/Hyperfishation.wav"))
 	m.play(music_pause_point)
 	if success:
 		await $/root/WorldRoot/AnimatedHero.usebutton
+		t.name = "Mysterious Voice"
+		t.contents.append("You got %s!" % fish.data.name)
 	GS.end_fishing()
+	if success:
+		GS.show_text(t)
 	queue_free()

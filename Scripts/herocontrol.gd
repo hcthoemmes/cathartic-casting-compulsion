@@ -45,10 +45,26 @@ func _physics_process(delta: float) -> void:
 			animPlayer.play("IdleStand")
 
 		move_and_slide()
+		
+	if GS.state == GS.PLAYER_STATE.IN_UI:
+		var tc = $/root/WorldRoot/CanvasLayer/TabContainer
+		
+		# More gross code, but shhhh
+		if Input.is_action_just_pressed("tab_left"): tc.current_tab -= 1
+		if Input.is_action_just_pressed("tab_right"): tc.current_tab += 1
+		if tc.current_tab == 1:
+			if Input.is_action_just_pressed("page_right"): print("Right one page")
+			if Input.is_action_just_pressed("page_left"): print("Left one page")
+		pass
+		
 	# For awaiting input to close the minigame. Also for the Big Pull mechanic
 	if Input.is_action_just_pressed("use"):
 		usebutton.emit()
 		print("Emitting")
+	if Input.is_action_just_pressed("pause"):
+		if GS.state != GS.PLAYER_STATE.FISHING and GS.state != GS.PLAYER_STATE.IN_UI:
+			GS.open_ui()
+		elif GS.state == GS.PLAYER_STATE.IN_UI: GS.close_ui()
 
 func _on_fishin_hole_body_entered(body: Node3D) -> void: 
 	if body == self: GS.fishing_possible = true
