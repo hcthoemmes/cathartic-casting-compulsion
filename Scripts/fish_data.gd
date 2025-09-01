@@ -4,7 +4,6 @@ class_name FishData
 @export var name: String
 @export_range(1, 5) var size: int
 @export_range(1, 5) var difficulty: int
-@export_range(1, 5) var strength: int
 @export_range(1, 5) var rarity: int
 @export var image: Texture2D
 var caught: int = 0

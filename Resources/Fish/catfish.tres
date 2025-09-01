@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="FishData" load_steps=2 format=3 uid="uid://cy142gygequ6r"]
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dvtaa13fm8g03"]
 
 [ext_resource type="Script" uid="uid://cuyp77p11pre3" path="res://Scripts/fish_data.gd" id="1_xfjt1"]
+[ext_resource type="Texture2D" uid="uid://cgylwmuh0fmvl" path="res://Sprites/catfish.png" id="1_yqhvx"]
 
 [resource]
 script = ExtResource("1_xfjt1")
 name = "catfish"
 size = 3
 difficulty = 3
-strength = 0
 rarity = 3
+image = ExtResource("1_yqhvx")
 metadata/_custom_type_script = "uid://cuyp77p11pre3"

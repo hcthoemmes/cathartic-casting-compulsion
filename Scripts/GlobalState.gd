@@ -14,6 +14,7 @@ var fishing_possible := false
 @onready var h = $/root/WorldRoot/AnimatedHero
 @onready var t = $/root/WorldRoot/CanvasLayer/TextBox
 
+
 # Pass in data, index of replacement text in mut_contents if required
 func show_text(textdata: TextBoxData, changeto = null) -> void:
 
@@ -38,8 +39,8 @@ func show_text(textdata: TextBoxData, changeto = null) -> void:
 	state = s
 
 func begin_fishing() -> void:
-	var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
-	var f = load("res://Scenes/fishing.tscn").instantiate()
+	
+	var fishing_scene = load("res://Scenes/fishing.tscn").instantiate()
 	
 	h.set_velocity(Vector3.ZERO)
 	
@@ -50,8 +51,11 @@ func begin_fishing() -> void:
 	await h.animPlayer.animation_finished
 	# We want them to hold their pose, but for now it's fine
 	
-	await get_tree().create_timer(waitTime).timeout
-	$/root/WorldRoot/CanvasLayer.add_child(f)
+	# RANDOM DELAY:
+	# var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
+	# await get_tree().create_timer(waitTime).timeout
+	
+	$/root/WorldRoot/CanvasLayer.add_child(fishing_scene)
 
 func end_fishing() -> void:
 	# Add obtained fish

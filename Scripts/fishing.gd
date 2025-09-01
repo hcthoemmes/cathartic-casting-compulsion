@@ -1,68 +1,46 @@
 extends Control
 
+@export var cooldown: float
+
+const failure_step := 1.0
+const success_step := 0.5
+const progress_min := -2.0
+
+var results = []
+var reel_direction: Vector2
+var progress := 0.0
+var music_pause_point := 0.0
+
 @onready var fish = $HookBox/DartingFish
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
-@onready var m : AudioStreamPlayer = get_node("../../MusicPlayer")
-
-@export var fishing_log_data: FishingLogData
-
-var results = []
-var failures = 0
-var reel_direction: Vector2
-var progress := 0.0
-var progress_min = -2
-var failure_step := 1.0
-var success_step := 0.5
-var music_pause_point := 0.0
+@onready var music : AudioStreamPlayer = get_node("../../MusicPlayer")
 
 
 func _ready() -> void:
-	var fishrng = RandomNumberGenerator.new() 
-	var weights = []
-	# debugging purposes ------------------------------------------------------
-	fishing_log_data.load_entries()
-	var entries = fishing_log_data.entries
-	for entry in entries:
-		match entry.rarity:
-			1:
-				weights.append(0.5)
-			2:
-				weights.append(0.25)
-			3:
-				weights.append(0.15)
-			4:
-				weights.append(0.08)
-			5:
-				weights.append(0.02)
-		print(entry.name)
-	print(weights)
-	await fish._set_data(entries[fishrng.rand_weighted(weights)])
-	await progress_bar.prepare()
-	# Coroutines just for safety's sake
-	print("- ", fish.data.name)
-	# end debug ---------------------------------------------------------------
-	music_pause_point = m.get_playback_position()
-	m.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
-	m.play()
+	music_pause_point = music.get_playback_position()
+	music.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
+	music.play()
 	
 	next_round()
-	
+
 
 func _physics_process(_delta: float) -> void:
 	# if fish is pulling, player can attempt to reel it in
 	if fish.status == "pulling":
 		# Snap to nearest unit vector for controller input 
-		reel_direction = Input.get_vector("west", "east", "north", "south")\
-			.snapped(Vector2(1, 1)).normalized()
+		reel_direction = Input.get_vector("west", "east", "north", "south")
+		reel_direction = reel_direction.snapped(Vector2(1, 1)).normalized()
+
 
 func next_round() -> void:
 	fish.status = "waiting"
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(cooldown).timeout
 	fish.pull()
 	# if not successfully reeled by end of response time, fail round
 	await get_tree().create_timer(fish.response_time).timeout
 	fish.tween.kill()
+	
 	if reel_success():
 		round_won()
 	else:
@@ -71,15 +49,21 @@ func next_round() -> void:
 		fish.reset()
 		next_round()
 
+
 func reel_success() -> bool:
-	return reel_direction == -fish.pull_direction if reel_direction else false
-	
+	if reel_direction:
+		return reel_direction == -fish.pull_direction 
+	else:
+		return false
+
+
 func round_won():
 	result.show_symbol("check")
 	progress += success_step
 	progress_bar.update(progress)
-	if progress >= fish.difficulty:
+	if progress >= fish.rounds:
 		fish_caught()
+
 
 func round_lost():
 	result.show_symbol("cross")
@@ -88,11 +72,13 @@ func round_lost():
 	if progress <= progress_min:
 		fish_escaped()
 
+
 func fish_caught() -> void:
 	fish.status = "caught"
 	fish.data.caught += 1
 	fish.reset()
 	unload(true)
+
 
 func fish_escaped() -> void:
 	fish.status = "escaped"
@@ -102,15 +88,16 @@ func fish_escaped() -> void:
 	await get_tree().create_timer(1.0).timeout
 	unload(false)
 
+
 func unload(success: bool) -> void:
-	var t = TextBoxData.new()
-	m.set_stream(load("res://Sound/Hyperfishation.wav"))
-	m.play(music_pause_point)
+	var text = TextBoxData.new()
+	music.set_stream(load("res://Sound/Hyperfishation.wav"))
+	music.play(music_pause_point)
 	if success:
 		await $/root/WorldRoot/AnimatedHero.usebutton
-		t.name = "Mysterious Voice"
-		t.contents.append("You got %s!" % fish.data.name)
+		text.name = "Mysterious Voice"
+		text.contents.append("You got %s!" % fish.data.name)
 	GS.end_fishing()
 	if success:
-		GS.show_text(t)
+		GS.show_text(text)
 	queue_free()

@@ -1,26 +1,35 @@
 extends Node2D
 
+const MAX_Y := 220.0
+const PROGRESS_MIN := -2.0
+
+var start_y
+var step
+
+
 @onready var progress_fish: Sprite2D = $ProgressFish
 @onready var fish: Sprite2D = $"../HookBox/DartingFish"
 @onready var fishing: Control = $".."
+@onready var min_y := progress_fish.position.y
 
-var escape_y
-var start_y
-var end_y = 220
-var distance
-var step
 
-func prepare() -> bool:
-	escape_y = progress_fish.position.y
-	distance = end_y - escape_y
-	
-	step = distance / (fish.difficulty - fishing.progress_min)
-	start_y = escape_y + (step * 2)
+func _ready() -> void:
+	start_y = calc_start_position(fish)
 	progress_fish.position.y = start_y
-	return true
+	
 
+## calculates and returns the y-value ProgressFish should start at
+## (two failures away from clipping off the bar)
+func calc_start_position(fish) -> float:
+	var distance := MAX_Y - min_y
+	step = distance / (fish.rounds - PROGRESS_MIN)
+	return min_y + (step * 2)
+
+
+## updates ProgressFish's position to show current progress
 func update(progress) -> void:
 	var new_y = start_y + (progress * step) 
-	create_tween().tween_property(
-		progress_fish, "position:y", new_y, 1.5
-	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().tween_property(
+			progress_fish, "position:y", new_y, 1.5
+	)
+	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
