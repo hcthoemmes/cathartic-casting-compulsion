@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c52e6aurmix1h"]
+[gd_scene load_steps=5 format=3 uid="uid://c52e6aurmix1h"]
 
 [ext_resource type="Texture2D" uid="uid://lc6hesq5i711" path="res://Sprites/book_bg.png" id="1_7uop3"]
+[ext_resource type="Script" uid="uid://c3rk1eu4r7f8n" path="res://Scripts/fish_encyclopedia.gd" id="1_yx0ha"]
+[ext_resource type="PackedScene" uid="uid://chm7xg5sngnf7" path="res://Scenes/EncyclopediaEntry.tscn" id="3_oxeck"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83ryy"]
 
 [node name="FishEncyclopedia" type="Control"]
 layout_mode = 3
@@ -9,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yx0ha")
 
 [node name="BookBg" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
@@ -17,3 +22,53 @@ texture = ExtResource("1_7uop3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(425, 223)
+
+[node name="LeftPage" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 271.0
+offset_top = 69.0
+offset_right = 571.0
+offset_bottom = 581.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="EncyclopediaEntry1" parent="LeftPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_83ryy")
+
+[node name="EncyclopediaEntry2" parent="LeftPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_83ryy")
+
+[node name="EncyclopediaEntry3" parent="LeftPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry4" parent="LeftPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry5" parent="LeftPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="RightPage" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 620.0
+offset_top = 69.0
+offset_right = 920.0
+offset_bottom = 581.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="EncyclopediaEntry6" parent="RightPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry7" parent="RightPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry8" parent="RightPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry9" parent="RightPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2
+
+[node name="EncyclopediaEntry10" parent="RightPage" instance=ExtResource("3_oxeck")]
+layout_mode = 2

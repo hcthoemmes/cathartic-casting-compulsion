@@ -14,14 +14,14 @@ var music_pause_point := 0.0
 @onready var fish = $HookBox/DartingFish
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
-@onready var music : AudioStreamPlayer = get_node("../../MusicPlayer")
+@onready var music: AudioStreamPlayer = get_node("../../MusicPlayer")
+@onready var encyclopedia: Control = $"../TabContainer/FishEncyclopedia"
 
 
 func _ready() -> void:
 	music_pause_point = music.get_playback_position()
 	music.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
 	music.play()
-	
 	next_round()
 
 
@@ -76,6 +76,8 @@ func round_lost():
 func fish_caught() -> void:
 	fish.status = "caught"
 	fish.data.caught += 1
+	# update encyclopedia
+	encyclopedia.update_entry(fish.data)
 	fish.reset()
 	unload(true)
 

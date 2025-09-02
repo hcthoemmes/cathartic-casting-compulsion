@@ -73,14 +73,14 @@ visible = false
 z_index = 1
 offset_right = 1152.0
 offset_bottom = 650.0
-current_tab = 0
+current_tab = 1
 
 [node name="MapUI" parent="CanvasLayer/TabContainer" instance=ExtResource("2_jn818")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
 [node name="FishEncyclopedia" parent="CanvasLayer/TabContainer" instance=ExtResource("3_hej2r")]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 

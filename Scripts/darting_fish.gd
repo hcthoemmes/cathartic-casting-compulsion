@@ -18,10 +18,10 @@ var tween
 var revealed := false
 
 @onready var start_position: Vector2 = position
-
+@onready var encyclopedia: Control = $"../../../TabContainer/FishEncyclopedia"
 
 func _ready() -> void:
-	data = EncyclopediaData.new().get_random_fish()
+	data = encyclopedia.get_random_fish()
 
 
 func _physics_process(_delta: float) -> void:

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 3.0
+const SPEED = 6
 const JUMP_VELOCITY = 4.5
 
 @onready var animPlayer = $fighterhero_walk/AnimationPlayer
@@ -17,7 +17,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor(): velocity += get_gravity() * delta
+	if not is_on_floor(): 
+		velocity += get_gravity() * delta
 	
 	# If outside fishing minigame or text box, get input
 	if GS.state == GS.PLAYER_STATE.WALKING:
@@ -28,9 +29,9 @@ func _physics_process(delta: float) -> void:
 			
 		var input_dir := Input.get_vector("west", "east", "north", "south")
 		var direction := Vector3(
-			input_dir.x - input_dir.y,
-			0,
-			input_dir.x + input_dir.y
+				input_dir.x - input_dir.y,
+				0,
+				input_dir.x + input_dir.y
 		)
 		
 		if input_dir:
@@ -50,23 +51,33 @@ func _physics_process(delta: float) -> void:
 		var tc = $/root/WorldRoot/CanvasLayer/TabContainer
 		
 		# More gross code, but shhhh
-		if Input.is_action_just_pressed("tab_left"): tc.current_tab -= 1
-		if Input.is_action_just_pressed("tab_right"): tc.current_tab += 1
+		if Input.is_action_just_pressed("ui_left"): 
+			tc.current_tab -= 1
+		if Input.is_action_just_pressed("ui_right"): 
+			tc.current_tab += 1
 		if tc.current_tab == 1:
-			if Input.is_action_just_pressed("page_right"): print("Right one page")
-			if Input.is_action_just_pressed("page_left"): print("Left one page")
-		pass
+			if Input.is_action_just_pressed("page_right"): 
+				print("Right one page")
+			if Input.is_action_just_pressed("page_left"): 
+				print("Left one page")
+		pass 
 		
 	# For awaiting input to close the minigame. Also for the Big Pull mechanic
 	if Input.is_action_just_pressed("use"):
 		usebutton.emit()
 		print("Emitting")
 	if Input.is_action_just_pressed("pause"):
-		if GS.state != GS.PLAYER_STATE.FISHING and GS.state != GS.PLAYER_STATE.IN_UI:
+		if (
+				GS.state != GS.PLAYER_STATE.FISHING \
+				and GS.state != GS.PLAYER_STATE.IN_UI
+		):
 			GS.open_ui()
-		elif GS.state == GS.PLAYER_STATE.IN_UI: GS.close_ui()
+		elif GS.state == GS.PLAYER_STATE.IN_UI: 
+			GS.close_ui()
 
 func _on_fishin_hole_body_entered(body: Node3D) -> void: 
-	if body == self: GS.fishing_possible = true
+	if body == self: 
+		GS.fishing_possible = true
 func _on_fishin_hole_body_exited(body: Node3D) -> void: 
-	if body == self: GS.fishing_possible = false
+	if body == self: 
+		GS.fishing_possible = false

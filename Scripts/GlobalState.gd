@@ -3,11 +3,11 @@ extends Node
 
 enum PLAYER_STATE { WALKING, FISHING, IN_TEXT, IN_UI }
 
-var timesFished := 0
+var times_fished := 0
 # if player attempts to exit screen, the text changes depending on how much they've fished
 # You consider going to town, → [but you think there's more here] → [but you want to fish some more] → [but the river calls to you]
 @export var state = PLAYER_STATE.WALKING
-var laststate #To return to the correct state
+var last_state #To return to the correct state
 var fishing_possible := false
 #var is_fishing	 	 := false
 #var is_in_text		 := false
@@ -38,6 +38,7 @@ func show_text(textdata: TextBoxData, changeto = null) -> void:
 	t.hide()
 	state = s
 
+
 func begin_fishing() -> void:
 	
 	var fishing_scene = load("res://Scenes/fishing.tscn").instantiate()
@@ -52,21 +53,25 @@ func begin_fishing() -> void:
 	# We want them to hold their pose, but for now it's fine
 	
 	# RANDOM DELAY:
-	# var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
-	# await get_tree().create_timer(waitTime).timeout
+	var waitTime = randi_range(5, 20) # 5 and 20 as a guess.
+	await get_tree().create_timer(waitTime).timeout
 	
 	$/root/WorldRoot/CanvasLayer.add_child(fishing_scene)
 
+
 func end_fishing() -> void:
 	# Add obtained fish
-	timesFished += 1
+	times_fished += 1
 	state = PLAYER_STATE.WALKING
 	h.rod.hide()
 
+
 func open_ui() -> void:
-	laststate = state
+	last_state = state
 	state = PLAYER_STATE.IN_UI
 	$/root/WorldRoot/CanvasLayer/TabContainer.show()
+	
+	
 func close_ui() -> void:
 	$/root/WorldRoot/CanvasLayer/TabContainer.hide()
-	state = laststate
+	state = last_state

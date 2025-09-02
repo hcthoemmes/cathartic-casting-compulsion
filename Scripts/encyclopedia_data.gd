@@ -1,4 +1,4 @@
-class_name EncyclopediaData extends Resource
+class_name EncyclopediaData extends Control
 
 var entries: Array[FishData]
 
@@ -27,6 +27,7 @@ func load_entries() -> void:
 		
 	# sort entries by rarity ascending
 	entries.sort_custom(func(a, b): return a.rarity < b.rarity) 
+
 
 ## returns a random [FishData] using weighted probabilities
 func get_random_fish() -> FishData:
