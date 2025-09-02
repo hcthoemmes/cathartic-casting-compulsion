@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b7xv75v8qltq4"]
+
+[ext_resource type="FontFile" uid="uid://dpa7yq620j75j" path="res://Resources/Fonts/Proza Libre/ProzaLibre-Bold.ttf" id="1_g3wvr"]
+[ext_resource type="FontFile" uid="uid://cjwb12m2bntft" path="res://Resources/Fonts/Proza Libre/ProzaLibre-BoldItalic.ttf" id="2_858fe"]
+[ext_resource type="FontFile" uid="uid://chn4pfo8t4hmk" path="res://Resources/Fonts/Proza Libre/ProzaLibre-Italic.ttf" id="3_lwxe2"]
+[ext_resource type="FontFile" uid="uid://dg6w5o4y5gued" path="res://Resources/Fonts/Proza Libre/ProzaLibre-Regular.ttf" id="4_mw742"]
+
+[resource]
+RichTextLabel/fonts/bold_font = ExtResource("1_g3wvr")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_858fe")
+RichTextLabel/fonts/italics_font = ExtResource("3_lwxe2")
+RichTextLabel/fonts/normal_font = ExtResource("4_mw742")

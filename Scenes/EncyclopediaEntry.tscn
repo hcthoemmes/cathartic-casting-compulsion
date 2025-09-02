@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chm7xg5sngnf7"]
 
 [ext_resource type="Script" uid="uid://dryr86g7fwcat" path="res://Scenes/encyclopedia_entry.gd" id="1_veer0"]
-[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SOBAD___.ttf" id="4_qllen"]
+[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SO/SOBAD___.ttf" id="4_qllen"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efo2f"]
 

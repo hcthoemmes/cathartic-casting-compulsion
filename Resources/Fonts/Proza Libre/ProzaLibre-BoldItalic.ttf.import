@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bphd5y2ngqguk"
-path="res://.godot/imported/SONARR__.ttf-064fa088143f692b26d81404a073f53e.fontdata"
+uid="uid://cjwb12m2bntft"
+path="res://.godot/imported/ProzaLibre-BoldItalic.ttf-d5888472c6dd6ec7e3b2cc41151597a0.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SONARR__.ttf"
-dest_files=["res://.godot/imported/SONARR__.ttf-064fa088143f692b26d81404a073f53e.fontdata"]
+source_file="res://Resources/Fonts/Proza Libre/ProzaLibre-BoldItalic.ttf"
+dest_files=["res://.godot/imported/ProzaLibre-BoldItalic.ttf-d5888472c6dd6ec7e3b2cc41151597a0.fontdata"]
 
 [params]
 

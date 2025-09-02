@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b548lgcnapvip"
-path="res://.godot/imported/SOWIDE__.ttf-877e8f2221dd101afa9a2eaa139a9efa.fontdata"
+uid="uid://bb5k76e532pmt"
+path="res://.godot/imported/ProzaLibre-SemiBold.ttf-669de5e6b5b1bfdbd3d5fd210f04e4b1.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOWIDE__.ttf"
-dest_files=["res://.godot/imported/SOWIDE__.ttf-877e8f2221dd101afa9a2eaa139a9efa.fontdata"]
+source_file="res://Resources/Fonts/Proza Libre/ProzaLibre-SemiBold.ttf"
+dest_files=["res://.godot/imported/ProzaLibre-SemiBold.ttf-669de5e6b5b1bfdbd3d5fd210f04e4b1.fontdata"]
 
 [params]
 

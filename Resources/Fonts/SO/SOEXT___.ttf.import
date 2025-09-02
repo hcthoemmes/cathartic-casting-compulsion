@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b7m5suxr0hymw"
-path="res://.godot/imported/SOCOND__.ttf-5ceb8d7fb3dcc7329cf4320540c77abb.fontdata"
+uid="uid://jf0x0i430ajp"
+path="res://.godot/imported/SOEXT___.ttf-e1241546ac66f1ac05cd142fdfdf1620.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOCOND__.ttf"
-dest_files=["res://.godot/imported/SOCOND__.ttf-5ceb8d7fb3dcc7329cf4320540c77abb.fontdata"]
+source_file="res://Resources/Fonts/SO/SOEXT___.ttf"
+dest_files=["res://.godot/imported/SOEXT___.ttf-e1241546ac66f1ac05cd142fdfdf1620.fontdata"]
 
 [params]
 

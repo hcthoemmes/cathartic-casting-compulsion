@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dg0o780nhsq8y"
-path="res://.godot/imported/SOBAD___.ttf-03312c40cba0d6708e911fcbe43ae7b4.fontdata"
+uid="uid://chn4pfo8t4hmk"
+path="res://.godot/imported/ProzaLibre-Italic.ttf-12989759afaf4bd21d7d682a9b521d7f.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOBAD___.ttf"
-dest_files=["res://.godot/imported/SOBAD___.ttf-03312c40cba0d6708e911fcbe43ae7b4.fontdata"]
+source_file="res://Resources/Fonts/Proza Libre/ProzaLibre-Italic.ttf"
+dest_files=["res://.godot/imported/ProzaLibre-Italic.ttf-12989759afaf4bd21d7d682a9b521d7f.fontdata"]
 
 [params]
 

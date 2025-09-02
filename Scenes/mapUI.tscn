@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dlkp16tn2rws5" path="res://Scripts/map_ui.gd" id="1_4vb7h"]
 [ext_resource type="Texture2D" uid="uid://dno7te1n2pvby" path="res://Sprites/mapUI.png" id="1_u71yq"]
 [ext_resource type="Texture2D" uid="uid://cejj5awi7sxxs" path="res://Sprites/mapmarker.png" id="2_r2k0d"]
-[ext_resource type="FontFile" uid="uid://b7m5suxr0hymw" path="res://Resources/Fonts/SOCOND__.ttf" id="4_hobna"]
-[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SOBAD___.ttf" id="5_mfkea"]
+[ext_resource type="FontFile" uid="uid://b7m5suxr0hymw" path="res://Resources/Fonts/SO/SOCOND__.ttf" id="4_hobna"]
+[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SO/SOBAD___.ttf" id="5_mfkea"]
 
 [node name="MapUI" type="Control"]
 layout_mode = 3

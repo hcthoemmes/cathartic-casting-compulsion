@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b2cv6lk8tj0qt"
-path="res://.godot/imported/SONORM__.ttf-92fa23ebd683cde23c9acb086031af67.fontdata"
+uid="uid://bgy85y07lx2ln"
+path="res://.godot/imported/SOSHAD__.ttf-c2a3e1424e24ce84bbe9242927b97156.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SONORM__.ttf"
-dest_files=["res://.godot/imported/SONORM__.ttf-92fa23ebd683cde23c9acb086031af67.fontdata"]
+source_file="res://Resources/Fonts/SO/SOSHAD__.ttf"
+dest_files=["res://.godot/imported/SOSHAD__.ttf-c2a3e1424e24ce84bbe9242927b97156.fontdata"]
 
 [params]
 

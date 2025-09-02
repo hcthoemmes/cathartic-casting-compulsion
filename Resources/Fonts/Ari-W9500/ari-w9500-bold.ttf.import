@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ubulllypjgtn"
-path="res://.godot/imported/SOSUE___.ttf-f3356a9b5c2dd1eefa45fe57b51e4d74.fontdata"
+uid="uid://bll0dn3llnaiq"
+path="res://.godot/imported/ari-w9500-bold.ttf-a7bba7e39d6dbeda2b70f46e75b2f9b1.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOSUE___.ttf"
-dest_files=["res://.godot/imported/SOSUE___.ttf-f3356a9b5c2dd1eefa45fe57b51e4d74.fontdata"]
+source_file="res://Resources/Fonts/Ari-W9500/ari-w9500-bold.ttf"
+dest_files=["res://.godot/imported/ari-w9500-bold.ttf-a7bba7e39d6dbeda2b70f46e75b2f9b1.fontdata"]
 
 [params]
 

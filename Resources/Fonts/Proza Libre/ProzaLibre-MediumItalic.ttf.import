@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://jf0x0i430ajp"
-path="res://.godot/imported/SOEXT___.ttf-03ec07c7c53253bf25b963729c693efb.fontdata"
+uid="uid://5wunmkkvackq"
+path="res://.godot/imported/ProzaLibre-MediumItalic.ttf-21b8364b5b009fcef9023b5ea3a71900.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOEXT___.ttf"
-dest_files=["res://.godot/imported/SOEXT___.ttf-03ec07c7c53253bf25b963729c693efb.fontdata"]
+source_file="res://Resources/Fonts/Proza Libre/ProzaLibre-MediumItalic.ttf"
+dest_files=["res://.godot/imported/ProzaLibre-MediumItalic.ttf-21b8364b5b009fcef9023b5ea3a71900.fontdata"]
 
 [params]
 

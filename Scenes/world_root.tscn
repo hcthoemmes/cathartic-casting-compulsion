@@ -7,8 +7,8 @@
 [ext_resource type="Script" uid="uid://c8dvyt6f35146" path="res://Scripts/music_player.gd" id="3_jn818"]
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
 [ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
+[ext_resource type="FontFile" uid="uid://bll0dn3llnaiq" path="res://Resources/Fonts/Ari-W9500/ari-w9500-bold.ttf" id="6_b6r6c"]
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
-[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SOBAD___.ttf" id="6_sdwg7"]
 [ext_resource type="PackedScene" uid="uid://0x2qw1iunmra" path="res://Scenes/fishingscape_3.tscn" id="8_b3nlw"]
 [ext_resource type="AudioStream" uid="uid://cnuqmah3el3q" path="res://Sound/sfx/SS_SOA_water_splash_light_clunk.wav" id="9_b6r6c"]
 [ext_resource type="PackedScene" uid="uid://der25vntqcw4q" path="res://Models/bridge/betterbridge.glb" id="9_jn818"]
@@ -89,12 +89,15 @@ scale = Vector2(0.33, 0.33)
 texture = ExtResource("14_v3syh")
 
 [node name="Label" type="Label" parent="CanvasLayer/Speechbubble"]
-offset_left = -121.0
-offset_top = -97.0
-offset_right = 121.0
-offset_bottom = 48.0
+offset_left = -121.212
+offset_top = -121.212
+offset_right = 120.788
+offset_bottom = 42.7879
 theme_override_colors/font_color = Color(0.992157, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_sdwg7")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("6_b6r6c")
 theme_override_font_sizes/font_size = 128
 text = "!"
 horizontal_alignment = 1

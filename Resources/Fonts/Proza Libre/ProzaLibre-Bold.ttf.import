@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bgy85y07lx2ln"
-path="res://.godot/imported/SOSHAD__.ttf-e600ca79ec69ac31745dee5b8c8f7597.fontdata"
+uid="uid://dpa7yq620j75j"
+path="res://.godot/imported/ProzaLibre-Bold.ttf-5f5022724640a86bba087bddc3977525.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/SOSHAD__.ttf"
-dest_files=["res://.godot/imported/SOSHAD__.ttf-e600ca79ec69ac31745dee5b8c8f7597.fontdata"]
+source_file="res://Resources/Fonts/Proza Libre/ProzaLibre-Bold.ttf"
+dest_files=["res://.godot/imported/ProzaLibre-Bold.ttf-5f5022724640a86bba087bddc3977525.fontdata"]
 
 [params]
 
