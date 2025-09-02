@@ -51,6 +51,9 @@ func begin_fishing() -> void:
 	h.rod.show()
 	h.animPlayer.play("CastRod")
 	await h.animPlayer.animation_finished
+	$/root/WorldRoot/SFXPlayer.stream = load("res://Sound/sfx/SS_SOA_water_splash_light_clunk.wav")
+	$/root/WorldRoot/SFXPlayer.set_volume_db(-10.0)
+	$/root/WorldRoot/SFXPlayer.play()
 	# We want them to hold their pose, but for now it's fine
 	
 	# RANDOM DELAY:

@@ -14,13 +14,18 @@ var music_pause_point := 0.0
 @onready var fish = $HookBox/DartingFish
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
-@onready var music: AudioStreamPlayer = get_node("../../MusicPlayer")
 @onready var encyclopedia: Control = $"../TabContainer/Encyclopedia"
 
+@onready var music: AudioStreamPlayer = get_node("../../MusicPlayer")
+@onready var sound: AudioStreamPlayer = get_node("../../SFXPlayer")
+@onready var success_sound = load("res://Sound/sfx/ESM_FG_FX_one_shot_fishing_pole_reeling_clicking_catch_fish_fast_1.wav")
+@onready var failure_sound = load("res://Sound/sfx/ESM_FG_FX_one_shot_fishing_pole_reeling_in_1_hook_capture_progress_rotate_clicky.wav")
 
 func _ready() -> void:
 	music_pause_point = music.get_playback_position()
-	music.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
+	if fish.data == load("res://Resources/Fish/whitewhale.tres"):
+		music.set_stream(load("res://Sound/A Nibble [Leviathan Mix MASTERED].wav"))
+	else: music.set_stream(load("res://Sound/Just A Nibble [LOOPED].wav"))
 	music.play()
 	next_round()
 
@@ -58,6 +63,8 @@ func reel_success() -> bool:
 
 
 func round_won():
+	sound.stream = success_sound
+	sound.play(0.48)
 	result.show_symbol("check")
 	progress += success_step
 	progress_bar.update(progress)
@@ -66,6 +73,8 @@ func round_won():
 
 
 func round_lost():
+	sound.stream = failure_sound
+	sound.play(1.76)
 	result.show_symbol("cross")
 	progress -= failure_step
 	progress_bar.update(progress)

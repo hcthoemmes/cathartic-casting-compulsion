@@ -23,7 +23,6 @@ var revealed := false
 func _ready() -> void:
 	data = encyclopedia.get_random_fish()
 
-
 func _physics_process(_delta: float) -> void:
 	if status == "waiting" and not (tween and tween.is_running):
 		idle()
