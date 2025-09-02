@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c308besmqnera"]
 
-[ext_resource type="Texture2D" uid="uid://drjasdhagy15r" path="res://Sprites/healthedness.png" id="1_4hkvy"]
+[ext_resource type="Texture2D" uid="uid://fwf2dwcjm7ro" path="res://Sprites/healthbar.png" id="1_4hkvy"]
 
 [node name="Healthedness" type="Control"]
 layout_mode = 3

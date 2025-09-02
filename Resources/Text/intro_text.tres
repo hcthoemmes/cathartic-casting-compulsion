@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TextBoxData" load_steps=2 format=3 uid="uid://cpeume0hnfngw"]
+
+[ext_resource type="Script" uid="uid://db7hs0wkijaa7" path="res://Scripts/text_box_data.gd" id="1_l072h"]
+
+[resource]
+script = ExtResource("1_l072h")
+mutable = false
+mut_index = 0
+mut_contents = Array[String]([])
+name = "Mysterious Voice"
+contents = Array[String](["At last! You've just escaped the Archon's Forest, having bested the Lord of the Far Above's third lieutenant.", "Despite your momentary victory, however, it seems that the Grand Shoals may yet fall under his violent rule, their magic bent towards wicked domination. There is much work still to be done.", "Not to mention that your attractive childhood friend/black mage... they seemed to know the lieutenant. And they're acting very cagey...", "Your next destination is the port city of Chantbark. You march onwards, with hope that its suzerain will grant you a boat to travel onwards. And you've heard tell of an ancient spear that may turn the tides of your quest.", "If the machines of the Far Above, belching fire and poison, take the power of the Shoals... all will be death. And the Orc towns will be made an example of.", "But enough about that!", "Now that you've made some progress, you have something more important you want to do."])
+metadata/_custom_type_script = "uid://db7hs0wkijaa7"

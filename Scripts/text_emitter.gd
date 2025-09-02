@@ -12,11 +12,11 @@ func _on_body_entered(body: Node3D) -> void:
 			# Doing this the gross way for now cause I gotta PUSH
 			# To be replaced with like. A nice table or something later on
 			# And also bound it so we don't go overboard
-			if GS.timesFished == 0:
+			if GS.times_fished == 0:
 				v = 0
-			elif GS.timesFished >= 1 and GS.timesFished < 10:
+			elif GS.times_fished >= 1 and GS.times_fished < 10:
 				v = 1
-			elif GS.timesFished >=10 and GS.timesFished < 20:
+			elif GS.times_fished >=10 and GS.times_fished < 20:
 				v = 2
 			else:
 				v = 3

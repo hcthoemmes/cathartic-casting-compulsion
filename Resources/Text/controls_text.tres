@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TextBoxData" load_steps=2 format=3 uid="uid://cw6nwo387dtbe"]
+
+[ext_resource type="Script" uid="uid://db7hs0wkijaa7" path="res://Scripts/text_box_data.gd" id="1_uqni6"]
+
+[resource]
+script = ExtResource("1_uqni6")
+mutable = false
+mut_index = 0
+mut_contents = Array[String]([])
+name = "Tutorializer"
+contents = Array[String](["You think back on the CONTROLS:", "Press [color=green]A[/color] (or Z/J on keyboard) to begin fishing.", "Use the Joystick/D-pad/Movement Keys to pull in the OPPOSITE direction of the fish when it darts."])
+metadata/_custom_type_script = "uid://db7hs0wkijaa7"

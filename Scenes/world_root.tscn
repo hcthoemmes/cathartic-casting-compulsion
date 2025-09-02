@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://di2kyclfwk28h"]
+[gd_scene load_steps=25 format=3 uid="uid://di2kyclfwk28h"]
 
 [ext_resource type="AudioStream" uid="uid://5als001ee0lr" path="res://Sound/Hyperfishation.wav" id="2_b3nlw"]
 [ext_resource type="PackedScene" uid="uid://btmx55hxmi1c0" path="res://Scenes/mapUI.tscn" id="2_jn818"]
@@ -8,10 +8,13 @@
 [ext_resource type="TorusMesh" uid="uid://gq0m4ij6k2fo" path="res://Resources/holemesh.tres" id="5_uakgf"]
 [ext_resource type="PackedScene" uid="uid://1ruxle3orpcj" path="res://Scenes/AnimatedHero.tscn" id="6_161yy"]
 [ext_resource type="PackedScene" uid="uid://ch4hah76bvg6x" path="res://Scenes/CameraRig.tscn" id="6_rooha"]
+[ext_resource type="FontFile" uid="uid://dg0o780nhsq8y" path="res://Resources/Fonts/SOBAD___.ttf" id="6_sdwg7"]
 [ext_resource type="PackedScene" uid="uid://0x2qw1iunmra" path="res://Scenes/fishingscape_3.tscn" id="8_b3nlw"]
 [ext_resource type="PackedScene" uid="uid://der25vntqcw4q" path="res://Models/bridge/betterbridge.glb" id="9_jn818"]
-[ext_resource type="PackedScene" path="res://Scenes/Healthedness.tscn" id="10_hej2r"]
-[ext_resource type="Script" uid="uid://jw86qys7iw2x" path="res://Scripts/text_emitter.gd" id="12_4ni0l"]
+[ext_resource type="PackedScene" uid="uid://c308besmqnera" path="res://Scenes/Healthedness.tscn" id="10_hej2r"]
+[ext_resource type="PackedScene" uid="uid://cptix2d6hof4i" path="res://Scenes/TextEmitter.tscn" id="12_3pwrd"]
+[ext_resource type="Resource" uid="uid://bj3qck0ubuki1" path="res://Resources/Text/leave_southeast.tres" id="13_v3syh"]
+[ext_resource type="Texture2D" uid="uid://bworyf4uuuqme" path="res://Sprites/speechbubble.png" id="14_v3syh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3nlw"]
 sky_top_color = Color(0.658956, 0.792599, 0.955538, 1)
@@ -46,12 +49,6 @@ size = Vector3(3, 3, 3)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hej2r"]
 data = PackedVector3Array(15.8636, -1.9008, 4.2896, 12.6709, -0.8515, -4.2897, 12.6709, -0.8515, 4.2896, 12.6709, -0.8515, -4.2897, 9.0332, 0.2014, 4.2896, 12.6709, -0.8515, 4.2896, 15.8636, -1.9008, 4.2896, 15.8636, -1.9008, -4.2897, 12.6709, -0.8515, -4.2897, 15.8636, -1.9008, -4.2897, 15.8636, -1.9008, 4.2896, 20.3134, -1.9008, 4.2896, 15.8636, -1.9008, -4.2897, 20.3134, -1.9008, 4.2896, 20.3134, -1.9008, -4.2897, 12.6709, -0.8515, -4.2897, 9.0332, 0.2014, -4.2897, 9.0332, 0.2014, 4.2896, 9.0332, 0.2014, -4.2897, -0.0003, 0.8145, 4.2896, 9.0332, 0.2014, 4.2896, 9.0332, 0.2014, -4.2897, -0.0003, 0.8145, -4.2897, -0.0003, 0.8145, 4.2896, -9.0339, 0.2014, -4.2897, -0.0003, 0.8145, 4.2896, -0.0003, 0.8145, -4.2897, -9.0339, 0.2014, -4.2897, -9.0339, 0.2014, 4.2896, -0.0003, 0.8145, 4.2896, -12.6716, -0.8515, -4.2897, -9.0339, 0.2014, 4.2896, -9.0339, 0.2014, -4.2897, -12.6716, -0.8515, -4.2897, -12.6716, -0.8515, 4.2896, -9.0339, 0.2014, 4.2896, -15.8642, -1.9008, 4.2896, -12.6716, -0.8515, 4.2896, -12.6716, -0.8515, -4.2897, -15.8642, -1.9008, 4.2896, -12.6716, -0.8515, -4.2897, -15.8642, -1.9008, -4.2897, -15.8642, -1.9008, -4.2897, -20.3134, -1.9008, 4.2896, -15.8642, -1.9008, 4.2896, -15.8642, -1.9008, -4.2897, -20.3134, -1.9008, -4.2897, -20.3134, -1.9008, 4.2896, 15.8636, -1.9008, -4.2897, 14.5524, 0.435, -4.2897, 12.6709, -0.8515, -4.2897, 15.8636, -1.9008, -4.2897, 20.3134, -1.9008, -4.2897, 14.5524, 0.435, -4.2897, 14.5524, 0.435, -4.2897, 9.0332, 0.2014, -4.2897, 12.6709, -0.8515, -4.2897, 14.5524, 0.435, -4.2897, 9.1777, 2.2047, -4.2897, 9.0332, 0.2014, -4.2897, 9.1777, 2.2047, -4.2897, -0.0003, 0.8145, -4.2897, 9.0332, 0.2014, -4.2897, 9.1777, 2.2047, -4.2897, -0.0003, 2.8093, -4.2897, -0.0003, 0.8145, -4.2897, -9.1783, 2.2047, -4.2897, -0.0003, 0.8145, -4.2897, -0.0003, 2.8093, -4.2897, -9.1783, 2.2047, -4.2897, -9.0339, 0.2014, -4.2897, -0.0003, 0.8145, -4.2897, -14.553, 0.435, -4.2897, -9.0339, 0.2014, -4.2897, -9.1783, 2.2047, -4.2897, -14.553, 0.435, -4.2897, -12.6716, -0.8515, -4.2897, -9.0339, 0.2014, -4.2897, -15.8642, -1.9008, -4.2897, -12.6716, -0.8515, -4.2897, -14.553, 0.435, -4.2897, -15.8642, -1.9008, -4.2897, -14.553, 0.435, -4.2897, -20.3134, -1.9008, -4.2897, 20.3134, -1.9008, -4.2897, 14.5524, 0.435, 4.2896, 14.5524, 0.435, -4.2897, 20.3134, -1.9008, -4.2897, 20.3134, -1.9008, 4.2896, 14.5524, 0.435, 4.2896, 14.5524, 0.435, 4.2896, 9.1777, 2.2047, -4.2897, 14.5524, 0.435, -4.2897, 14.5524, 0.435, 4.2896, 9.1777, 2.2047, 4.2896, 9.1777, 2.2047, -4.2897, 9.1777, 2.2047, 4.2896, -0.0003, 2.8093, -4.2897, 9.1777, 2.2047, -4.2897, 9.1777, 2.2047, 4.2896, -0.0003, 2.8093, 4.2896, -0.0003, 2.8093, -4.2897, -9.1783, 2.2047, 4.2896, -0.0003, 2.8093, -4.2897, -0.0003, 2.8093, 4.2896, -9.1783, 2.2047, 4.2896, -9.1783, 2.2047, -4.2897, -0.0003, 2.8093, -4.2897, -14.553, 0.435, 4.2896, -9.1783, 2.2047, -4.2897, -9.1783, 2.2047, 4.2896, -14.553, 0.435, 4.2896, -14.553, 0.435, -4.2897, -9.1783, 2.2047, -4.2897, -20.3134, -1.9008, -4.2897, -14.553, 0.435, -4.2897, -14.553, 0.435, 4.2896, -20.3134, -1.9008, -4.2897, -14.553, 0.435, 4.2896, -20.3134, -1.9008, 4.2896, 20.3134, -1.9008, 4.2896, 12.6709, -0.8515, 4.2896, 14.5524, 0.435, 4.2896, 20.3134, -1.9008, 4.2896, 15.8636, -1.9008, 4.2896, 12.6709, -0.8515, 4.2896, 12.6709, -0.8515, 4.2896, 9.1777, 2.2047, 4.2896, 14.5524, 0.435, 4.2896, 12.6709, -0.8515, 4.2896, 9.0332, 0.2014, 4.2896, 9.1777, 2.2047, 4.2896, 9.0332, 0.2014, 4.2896, -0.0003, 2.8093, 4.2896, 9.1777, 2.2047, 4.2896, 9.0332, 0.2014, 4.2896, -0.0003, 0.8145, 4.2896, -0.0003, 2.8093, 4.2896, -9.0339, 0.2014, 4.2896, -0.0003, 2.8093, 4.2896, -0.0003, 0.8145, 4.2896, -9.0339, 0.2014, 4.2896, -9.1783, 2.2047, 4.2896, -0.0003, 2.8093, 4.2896, -12.6716, -0.8515, 4.2896, -9.1783, 2.2047, 4.2896, -9.0339, 0.2014, 4.2896, -12.6716, -0.8515, 4.2896, -14.553, 0.435, 4.2896, -9.1783, 2.2047, 4.2896, -20.3134, -1.9008, 4.2896, -14.553, 0.435, 4.2896, -12.6716, -0.8515, 4.2896, -20.3134, -1.9008, 4.2896, -12.6716, -0.8515, 4.2896, -15.8642, -1.9008, 4.2896, -0.0003, 2.8093, -4.2897, -0.0003, 0.8145, 4.2896, -0.0003, 0.8145, -4.2897, -0.0003, 2.8093, -4.2897, -0.0003, 2.8093, 4.2896, -0.0003, 0.8145, 4.2896)
 
-[sub_resource type="Resource" id="Resource_4ni0l"]
-metadata/__load_path__ = "res://Resources/Text/leave_northeast.tres"
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3pwrd"]
-size = Vector3(2.84814, 2.70508, 2.20886)
-
 [node name="WorldRoot" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -73,16 +70,34 @@ visible = false
 z_index = 1
 offset_right = 1152.0
 offset_bottom = 650.0
-current_tab = 1
+current_tab = 0
 
-[node name="MapUI" parent="CanvasLayer/TabContainer" instance=ExtResource("2_jn818")]
-visible = false
+[node name="World Map" parent="CanvasLayer/TabContainer" instance=ExtResource("2_jn818")]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="FishEncyclopedia" parent="CanvasLayer/TabContainer" instance=ExtResource("3_hej2r")]
+[node name="Encyclopedia" parent="CanvasLayer/TabContainer" instance=ExtResource("3_hej2r")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="Speechbubble" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(664, 168)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("14_v3syh")
+
+[node name="Label" type="Label" parent="CanvasLayer/Speechbubble"]
+offset_left = -121.0
+offset_top = -97.0
+offset_right = 121.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.992157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_sdwg7")
+theme_override_font_sizes/font_size = 128
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_b3nlw")
@@ -147,6 +162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
 shape = SubResource("BoxShape3D_t731x")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="FishinHole"]
+visible = false
 mesh = ExtResource("5_uakgf")
 
 [node name="CameraRig" parent="." instance=ExtResource("6_rooha")]
@@ -169,19 +185,15 @@ transform = Transform3D(0.0487423, 0, -0.383841, 0, 0.386924, 0, 0.383841, 0, 0.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="betterbridge/Bridge/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hej2r")
 
-[node name="NorthwestExit" type="Area3D" parent="."]
+[node name="NorthwestExit" parent="." instance=ExtResource("12_3pwrd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40295, 0, -8.64612)
-script = ExtResource("12_4ni0l")
-data = SubResource("Resource_4ni0l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NorthwestExit"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.924072, 0.852539, 0.604431)
-shape = SubResource("BoxShape3D_3pwrd")
-debug_color = Color(0.69152, 0.497219, 3.85046e-07, 0.42)
+[node name="SoutheastExit" parent="." instance=ExtResource("12_3pwrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585327, 0, 40.7261)
+data = ExtResource("13_v3syh")
 
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_finished"]
 [connection signal="body_entered" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_entered"]
 [connection signal="body_exited" from="FishinHole" to="AnimatedHero" method="_on_fishin_hole_body_exited"]
-[connection signal="body_entered" from="NorthwestExit" to="NorthwestExit" method="_on_body_entered"]
 
 [editable path="betterbridge"]

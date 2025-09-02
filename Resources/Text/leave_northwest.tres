@@ -6,7 +6,7 @@
 script = ExtResource("1_g575d")
 mutable = true
 mut_index = 1
-mut_contents = Array[String](["but you have a goal.", "but there's a hook just waiting for a baiting.", "but you wish for the fish.", "but this is the game now."])
+mut_contents = Array[String](["but you've finally made it through that RPG stuff to get back to the [i]real game![/i]", "but there's a hook just waiting for a baiting.", "but you wish for the fish.", "but this is the game now. Honestly? A worthwhile expenditure of 60 US Dollars."])
 name = "Your Own Mind"
-contents = Array[String](["You consider going back to the village...", "DEFAULT TEXT"])
+contents = Array[String](["You consider going back into the forest...", "DEFAULT TEXT"])
 metadata/_custom_type_script = "uid://db7hs0wkijaa7"

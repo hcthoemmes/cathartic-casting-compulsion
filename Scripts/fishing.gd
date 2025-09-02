@@ -15,7 +15,7 @@ var music_pause_point := 0.0
 @onready var result: Node2D = $HookBox/Result
 @onready var progress_bar: Sprite2D = $ProgressBar
 @onready var music: AudioStreamPlayer = get_node("../../MusicPlayer")
-@onready var encyclopedia: Control = $"../TabContainer/FishEncyclopedia"
+@onready var encyclopedia: Control = $"../TabContainer/Encyclopedia"
 
 
 func _ready() -> void:

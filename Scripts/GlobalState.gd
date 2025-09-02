@@ -3,6 +3,7 @@ extends Node
 
 enum PLAYER_STATE { WALKING, FISHING, IN_TEXT, IN_UI }
 
+var first_entrance := true # To show the player the controls
 var times_fished := 0
 # if player attempts to exit screen, the text changes depending on how much they've fished
 # You consider going to town, → [but you think there's more here] → [but you want to fish some more] → [but the river calls to you]
@@ -46,7 +47,7 @@ func begin_fishing() -> void:
 	h.set_velocity(Vector3.ZERO)
 	
 	state = PLAYER_STATE.FISHING
-	# is_fishing = true
+	$/root/WorldRoot/CanvasLayer/Speechbubble.hide()
 	h.rod.show()
 	h.animPlayer.play("CastRod")
 	await h.animPlayer.animation_finished
@@ -63,6 +64,7 @@ func end_fishing() -> void:
 	# Add obtained fish
 	times_fished += 1
 	state = PLAYER_STATE.WALKING
+	$/root/WorldRoot/CanvasLayer/Speechbubble.show()
 	h.rod.hide()
 
 

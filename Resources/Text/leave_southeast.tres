@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_1d4yt")
-mutable = false
-mut_index = 0
-mut_contents = Array[String]([])
+mutable = true
+mut_index = 1
+mut_contents = Array[String](["... but there's something to do here. A watery good time to be had, oh yes.", "... but the villagers lack gills, so why bother?", "... but it seems to already be getting ransacked by bad guys. They can wait.", "... but it's a pile of ash. A *fishless* pile of ash."])
 name = ""
-contents = Array[String]([])
+contents = Array[String](["You walk toward the village...", "DEFAULT TEXT"])
 metadata/_custom_type_script = "uid://db7hs0wkijaa7"

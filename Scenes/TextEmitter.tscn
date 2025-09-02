@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cptix2d6hof4i"]
+
+[ext_resource type="Script" uid="uid://jw86qys7iw2x" path="res://Scripts/text_emitter.gd" id="1_rtlbn"]
+[ext_resource type="Resource" uid="uid://dv6nms5rpwuhb" path="res://Resources/Text/leave_northwest.tres" id="2_el0dv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3pwrd"]
+size = Vector3(2.84814, 2.70508, 2.20886)
+
+[node name="NorthwestExit" type="Area3D"]
+script = ExtResource("1_rtlbn")
+data = ExtResource("2_el0dv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.924072, 0.852539, 0.604431)
+shape = SubResource("BoxShape3D_3pwrd")
+debug_color = Color(0.69152, 0.497219, 3.85046e-07, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

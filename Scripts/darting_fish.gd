@@ -18,7 +18,7 @@ var tween
 var revealed := false
 
 @onready var start_position: Vector2 = position
-@onready var encyclopedia: Control = $"../../../TabContainer/FishEncyclopedia"
+@onready var encyclopedia: Control = $"../../../TabContainer/Encyclopedia"
 
 func _ready() -> void:
 	data = encyclopedia.get_random_fish()

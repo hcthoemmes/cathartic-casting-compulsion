@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 6
+const SPEED = 4
 const JUMP_VELOCITY = 4.5
 
 @onready var animPlayer = $fighterhero_walk/AnimationPlayer
@@ -12,6 +12,7 @@ signal usebutton()
 
 
 func _ready() -> void:
+	GS.show_text(load("res://Resources/Text/intro_text.tres"))
 	rod.hide()
 	#GS.show_text(load("res://Resources/Text/leave_northwest.tres"), 1)
 
@@ -78,6 +79,11 @@ func _physics_process(delta: float) -> void:
 func _on_fishin_hole_body_entered(body: Node3D) -> void: 
 	if body == self: 
 		GS.fishing_possible = true
+		if GS.first_entrance:
+			GS.show_text(load("res://Resources/Text/controls_text.tres"))
+			GS.first_entrance = false
+		$/root/WorldRoot/CanvasLayer/Speechbubble.show()
 func _on_fishin_hole_body_exited(body: Node3D) -> void: 
 	if body == self: 
+		$/root/WorldRoot/CanvasLayer/Speechbubble.hide()
 		GS.fishing_possible = false
